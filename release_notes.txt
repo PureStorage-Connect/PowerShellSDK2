@@ -1,0 +1,279 @@
+Pure Storage PowerShell SDK for FlashArray 2.2 Release Notes
+
+The Pure Storage PowerShell SDK for FlashArray provides integration with the Purity Operating Environment and the FlashArray.
+It provides the functionalities of Purity's REST API as PowerShell cmdlets.
+
+RELEASE NOTES
+Get the latest information about this SDK online at: https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/bbb_Microsoft_Integration_Releases/Pure_Storage_PowerShell_SDK
+
+RELEASE REQUIREMENTS AND COMPATIBILITY
+
+This release requires at least .NET Core 2.1 (https://dotnet.microsoft.com/download/dotnet-core/2.1/).
+This release is compatible with Purity FlashArrays that support Pure Storage REST API 2.0 to 2.2 inclusive.
+This release is also compatible to be installed side by side with Pure Storage PowerShell SDK 1.x.
+This release requires a 64-bit operating system. 
+This release requires the following PowerShell versions:
+---------------------------------------
+OS                     PowerShell Version 
+---------------------------------------      
+Windows 10             5.1.17134.858
+Windows Server 2019    5.1.17763.1007
+Windows Server 2016    5.1.14393.3471
+Windows Server 2012R2  5.1.14409.1018
+*Mac OS                7.0.1
+*Linux                 7.0.1
+---------------------------------------
+* Not fully tested.
+
+INSTALLATION AND REMOVAL
+The installation can be done using the following methods.
+
+POWERSHELL GALLERY
+    The Pure Storage FlashArray PowerShell SDK 2.2 can be installed via the PowerShell Gallery by using the Install-Module cmdlet: "Install-Module -Name PureStoragePowerShellSDK2"
+    See https://www.powershellgallery.com/ for more details on how to discover resources on the PowerShell Gallery.
+
+INSTALLER MSI
+    To install the Pure Storage PowerShell SDK 2.2 via the MSI installer, extract and run PureStoragePowerShellSDK2Installer.msi, and follow the instructions. The Administrator privilege is required to perform the installation.
+    To verify the installation, run "Get-Command -Module PureStoragePowerShellSDK2" in a new PowerShell prompt. The newly installed cmdlets should be listed. 
+    
+To remove the Pure Storage PowerShell SDK 2 module, perform the following based on the installation method used.
+Installed via the PowerShell Gallery: Use the "Remove-Module -Name PureStoragePowerShellSDK2" command.
+Installed via the MSI: The Pure Storage PowerShell SDK 2.2 MSI can be uninstalled from "Programs and Features" of the Control Panel.
+
+
+CMDLET HELP
+Download the detailed help using the command "Update-Help -Module PureStoragePowerShellSDK2".
+Get help using "Get-Help -Name Get-Pfa2Volume" for cmdlet Get-Pfa2Volume.
+
+KNOWN ISSUES IN THIS RELEASE
+New-Pfa2Kmip
+    There is a limitation of the cmdlet New-Pfa2Kmip. When creating a new KMIP server, a certificate is required. 
+    The mandatory parameter -Certificate accepts the value of a certificate name instead of certificate content. 
+    The proper workflow to create a KMIP server is:
+
+    1- Import a certificate and assign a name for the certificate
+
+    2- Use a certificate name when creating KMIP server
+
+    However, the Pure Storage FlashArray PowerShell SDK 2.2 does not provide the functionality of importing a certificate (as shown in Step 1). 
+The limitation also applies to the Update-Pfa2Kmip cmdlet when a user wants to update a certificate of a specific KMIP server. 
+
+    This cmdlet will be introduced in a future release. The alternative way to realize step 1 is to use the CLI to import the certificate. 
+    For information about the "purecert" CLI command see the support article: https://support.purestorage.com/FlashArray/PurityFA/FlashArray_User_Guide/Purity_FA_Version_5.2.5/Using_the_CLI_to_Administer_a_FlashArray/Purity%2F%2F%2F%2FFA_CLI_Commands/purecert
+    The Pure Storage FlashArray PowerShell SDK 2.2 also provides a way to invoke a CLI command. 
+    Other KMIP related cmdlets like Get-Pfa2Kmip, Delete-Pfa2Kmip, and Get-Pfa2KmipTest do not have the limitation mentioned above.
+
+RESOURCES
+PureStorage-Connect GitHub Repository - https://github.com/PureStorage-Connect/PowerShellSDK
+PureCode Slack Team - https://codeinvite.purestorage.com/
+Pure Storage Code Website - https://code.purestorage.com
+
+RELEASE 2.2
+
+Release 2.2 adds the following cmdlets:
+Connect-Pfa2Array
+Disconnect-Pfa2Array
+Get-Pfa2Admin
+Get-Pfa2AdminApiToken
+Get-Pfa2AdminCache
+Get-Pfa2AdminSetting
+Get-Pfa2Alert
+Get-Pfa2AlertEvent
+Get-Pfa2ApiClient
+Get-Pfa2App
+Get-Pfa2AppNode
+Get-Pfa2Array
+Get-Pfa2ArrayEula
+Get-Pfa2ArrayNtpTest
+Get-Pfa2ArrayPerformance
+Get-Pfa2ArraySpace
+Get-Pfa2Audit
+Get-Pfa2Connection
+Get-Pfa2Controller
+Get-Pfa2DirectoryService
+Get-Pfa2DirectoryServiceRole
+Get-Pfa2DirectoryServiceTest
+Get-Pfa2Dns
+Get-Pfa2Hardware
+Get-Pfa2Host
+Get-Pfa2HostGroup
+Get-Pfa2HostGroupHost
+Get-Pfa2HostGroupPerformance
+Get-Pfa2HostGroupPerformanceByArray
+Get-Pfa2HostGroupProtectionGroup
+Get-Pfa2HostGroupSpace
+Get-Pfa2HostHostGroup
+Get-Pfa2HostPerformance
+Get-Pfa2HostPerformanceByArray
+Get-Pfa2HostProtectionGroup
+Get-Pfa2HostSpace
+Get-Pfa2Kmip
+Get-Pfa2KmipTest
+Get-Pfa2MaintenanceWindow
+Get-Pfa2Offload
+Get-Pfa2Pod
+Get-Pfa2PodArray
+Get-Pfa2PodPerformance
+Get-Pfa2PodPerformanceByArray
+Get-Pfa2PodPerformanceReplication
+Get-Pfa2PodPerformanceReplicationByArray
+Get-Pfa2PodReplicaLink
+Get-Pfa2PodReplicaLinkLag
+Get-Pfa2PodReplicaLinkPerformanceReplication
+Get-Pfa2PodReplicaLinkPerformanceReplicationByArray
+Get-Pfa2PodSpace
+Get-Pfa2Port
+Get-Pfa2PortInitiator
+Get-Pfa2ProtectionGroup
+Get-Pfa2ProtectionGroupHost
+Get-Pfa2ProtectionGroupHostGroup
+Get-Pfa2ProtectionGroupPerformanceReplication
+Get-Pfa2ProtectionGroupPerformanceReplicationByArray
+Get-Pfa2ProtectionGroupSnapshot
+Get-Pfa2ProtectionGroupSnapshotTransfer
+Get-Pfa2ProtectionGroupSpace
+Get-Pfa2ProtectionGroupTarget
+Get-Pfa2ProtectionGroupVolume
+Get-Pfa2RemotePod
+Get-Pfa2RemoteProtectionGroup
+Get-Pfa2RemoteProtectionGroupSnapshot
+Get-Pfa2RemoteProtectionGroupSnapshotTransfer
+Get-Pfa2RemoteVolumeSnapshot
+Get-Pfa2RemoteVolumeSnapshotTransfer
+Get-Pfa2SmiS
+Get-Pfa2Software
+Get-Pfa2SoftwareInstallation
+Get-Pfa2SoftwareInstallationStep
+Get-Pfa2Subnet
+Get-Pfa2Support
+Get-Pfa2SupportTest
+Get-Pfa2Volume
+Get-Pfa2VolumeGroup
+Get-Pfa2VolumeGroupPerformance
+Get-Pfa2VolumeGroupSpace
+Get-Pfa2VolumeGroupVolume
+Get-Pfa2VolumePerformance
+Get-Pfa2VolumePerformanceByArray
+Get-Pfa2VolumeProtectionGroup
+Get-Pfa2VolumeSnapshot
+Get-Pfa2VolumeSnapshotTags
+Get-Pfa2VolumeSnapshotTransfer
+Get-Pfa2VolumeSpace
+Get-Pfa2VolumeTag
+Get-Pfa2VolumeVolumeGroup
+Invoke-Pfa2CLICommand
+New-Pfa2Admin
+New-Pfa2AdminApiToken
+New-Pfa2AdminRoleObject
+New-Pfa2ApiClient
+New-Pfa2ArrayAuth
+New-Pfa2ChapObject
+New-Pfa2Connection
+New-Pfa2EulaSignatureObject
+New-Pfa2Host
+New-Pfa2HostGroup
+New-Pfa2HostGroupHost
+New-Pfa2HostGroupProtectionGroup
+New-Pfa2HostHostGroup
+New-Pfa2HostProtectionGroup
+New-Pfa2Kmip
+New-Pfa2Login
+New-Pfa2Logout
+New-Pfa2MaintenanceWindow
+New-Pfa2Offload
+New-Pfa2OffloadAmazons3Object
+New-Pfa2OffloadAzureObject
+New-Pfa2OffloadGoogleCloudObject
+New-Pfa2OffloadNfsObject
+New-Pfa2Pod
+New-Pfa2PodArray
+New-Pfa2PodReplicaLink
+New-Pfa2ProtectionGroup
+New-Pfa2ProtectionGroupHost
+New-Pfa2ProtectionGroupHostGroup
+New-Pfa2ProtectionGroupSnapshot
+New-Pfa2ProtectionGroupTarget
+New-Pfa2ProtectionGroupVolume
+New-Pfa2QosObject
+New-Pfa2ReferenceNoIdObject
+New-Pfa2ReferenceObject
+New-Pfa2ReplicationScheduleObject
+New-Pfa2RetentionPolicyObject
+New-Pfa2SnapshotScheduleObject
+New-Pfa2Subnet
+New-Pfa2TagObject
+New-Pfa2Volume
+New-Pfa2VolumeGroup
+New-Pfa2VolumeProtectionGroup
+New-Pfa2VolumeSnapshot
+Remove-Pfa2Admin
+Remove-Pfa2AdminApiToken
+Remove-Pfa2AdminCache
+Remove-Pfa2ApiClient
+Remove-Pfa2Connection
+Remove-Pfa2Host
+Remove-Pfa2HostGroup
+Remove-Pfa2HostGroupHost
+Remove-Pfa2HostGroupProtectionGroup
+Remove-Pfa2HostHostGroup
+Remove-Pfa2HostProtectionGroup
+Remove-Pfa2Kmip
+Remove-Pfa2MaintenanceWindow
+Remove-Pfa2Offload
+Remove-Pfa2Pod
+Remove-Pfa2PodArray
+Remove-Pfa2PodReplicaLink
+Remove-Pfa2ProtectionGroup
+Remove-Pfa2ProtectionGroupHost
+Remove-Pfa2ProtectionGroupHostGroup
+Remove-Pfa2ProtectionGroupSnapshot
+Remove-Pfa2ProtectionGroupTarget
+Remove-Pfa2ProtectionGroupVolume
+Remove-Pfa2RemoteProtectionGroup
+Remove-Pfa2RemoteProtectionGroupSnapshot
+Remove-Pfa2Subnet
+Remove-Pfa2Volume
+Remove-Pfa2VolumeGroup
+Remove-Pfa2VolumeProtectionGroup
+Remove-Pfa2VolumeSnapshot
+Remove-Pfa2VolumeSnapshotTags
+Remove-Pfa2VolumeTag
+Set-Pfa2AdminCache
+Set-Pfa2VolumeSnapshotTagsBatch
+Set-Pfa2VolumeTagBatch
+Update-Pfa2Admin
+Update-Pfa2AdminSetting
+Update-Pfa2Alert
+Update-Pfa2ApiClient
+Update-Pfa2App
+Update-Pfa2Array
+Update-Pfa2ArrayEula
+Update-Pfa2Audit
+Update-Pfa2DirectoryService
+Update-Pfa2DirectoryServiceRole
+Update-Pfa2Dns
+Update-Pfa2Hardware
+Update-Pfa2Host
+Update-Pfa2HostGroup
+Update-Pfa2Kmip
+Update-Pfa2Pod
+Update-Pfa2PodReplicaLink
+Update-Pfa2ProtectionGroup
+Update-Pfa2ProtectionGroupSnapshot
+Update-Pfa2ProtectionGroupTarget
+Update-Pfa2RemoteProtectionGroup
+Update-Pfa2RemoteProtectionGroupSnapshot
+Update-Pfa2SmiS
+Update-Pfa2Subnet
+Update-Pfa2Support
+Update-Pfa2Volume
+Update-Pfa2VolumeGroup
+Update-Pfa2VolumeSnapshot
+
+PERFORMANCE TESTING
+No performance testing was done for this release.
+
+OPEN SOURCE LICENSES
+Please review licenses.txt
+
+
