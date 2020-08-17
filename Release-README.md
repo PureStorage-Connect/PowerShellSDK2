@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Creating a PowerShell Session with FlashArray
 There are two ways to create a PowerShell Session with FlashArray, through API Token or through OAUTH2 Token.
 
