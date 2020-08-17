@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Creating a PowerShell Session with FlashArray
 There are two ways to create a PowerShell Session with FlashArray, through API Token or through OAUTH2 Token.
 
@@ -10,6 +11,23 @@ You need to define `$ArrayEndpoint` with the FlashArray IP or Name. You will als
 
 ## OAUTH2 Token
 To create a PowerShell Session using OAUTH2 follow the 2 steps bellow:
+=======
+# Pure Storage FlashArray PowerShell SDK v2.2 Readme
+
+The SDK provides integration with the Purity Operating Environment and the FlashArray. It provides functionalities of Purity's REST API as PowerShell cmdlets.
+
+The Pure Storage PowerShell SDK version 2 is a major new release of the SDK. Cmdlet naming and parameters have changed since previous SDK version 1 releases. Please be sure to view the included readme and release_notes files, as well as visit our website at https://support.purestorage.com/Solutions/Microsoft_Platform_Guide for more information.
+
+To install the module, you can either:
+- download the module folder from here or from the link below and do an Import-Module -Name PureStoragePowerShellSDK2.psd1
+- do an Install-Module PureStoragePowerShellSDK2 from the PSGallery repository
+- install using the MSI (Windows) avilable in the MSI Installer folder or at the link below
+
+### DOWNLOADS
+* [PSGallery] (https://www.powershellgallery.com/packages?q=purestorage)
+* [Installation Package](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/PurePowerShellSDKInstaller.msi)
+* [Pure Storage Support -- Programming Interfaces > PowerShell](https://support.purestorage.com/Solutions/Programming_Interfaces/PowerShell)
+>>>>>>> 6e8c8bbda74f994f759152f8068e67dbfe9d6753
 
 1. **An API Client registration on the array, and an RSA key pair (certificates).**
     
@@ -162,3 +180,24 @@ See `$VerbosePreference` in `Get-Help About_Preference_Variables`
 Using the `Set-Pfa2Logging` cmdlet you provide a named file for the log to be output to. 
 Logging stops when you set the `-LogFilename` to empty.
 
+<<<<<<< HEAD
+=======
+### HISTORY
+* [v2.2.267] Initial release
+
+<!-- wp:separator -->
+<hr class="wp-block-separator"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph -->
+<p><em>To report issues or request new features, please enter them here:</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="https://github.com/PureStorage-Connect/vRO-Plugin/issues">https://github.com/PureStorage-Connect/PowerShellSDK2/issues</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For questions,&nbsp;<a href="https://codeinvite.purestorage.com/">join our Pure Storage Code Slack</a>&nbsp;team! Check out the #pfa-powershell channel</p>
+<!-- /wp:paragraph -->
+>>>>>>> 6e8c8bbda74f994f759152f8068e67dbfe9d6753
