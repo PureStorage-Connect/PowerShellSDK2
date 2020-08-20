@@ -17,7 +17,8 @@ The Pure Storage PowerShell SDK provides integration with the Purity Operating E
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>
 <!-- /wp:separator -->
-Follow [this link](https://github.com/mikenelson-io/MSTerminal) to Mike's Windows Terminal Settings file (as requested!)
+
+[Link to Mikes Windows Terminal Settings file - *as requested!*](https://github.com/mikenelson-io/MSTerminal)
 
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>
