@@ -1,20 +1,22 @@
-# Pure Storage PowerShell SDK 2 Readme
+# Pure Storage PowerShell SDK 2
 
-The Pure Storage PowerShell SDK provides integration with the Purity Operating Environment and FlashArray. It provides functionalities of Purity's REST API as PowerShell cmdlets. Read more about version 2 here in our Microsoft Platform Guide at https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell
+The Pure Storage PowerShell SDK provides integration with the Purity Operating Environment and FlashArray. It provides functionalities of Purity's REST API as PowerShell cmdlets. Read more about version 2 here in our [Microsoft Platform Guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell).
 
-### DOWNLOADS
-* BEST!! [Install from the PowerShell Gallery](https://www.powershellgallery.com/packages/PureStoragePowerShellSDK2)-> Install-Module -Name PureStoragePowerShellSDK2
+### :point_down:DOWNLOADS
+* :100: [Install from the PowerShell Gallery](https://www.powershellgallery.com/packages/PureStoragePowerShellSDK2)-> Install-Module -Name PureStoragePowerShellSDK2
 * [Installation Package](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/PurePowerShellSDKInstaller.msi)
 * [Pure Storage Support -- Programming Interfaces > PowerShell](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)
+* * [Previous SDK version Github Repository](https://www.github.com/PureStorage-Connect/PowerShellSDK)
 
-### THE DOWNLOAD OF THE PREVIOUS SDK VERSION 1 IS LOCATED HERE
-* [Github Repository for SDK version 1](https://www.github.com/PureStorage-Connect/PowerShellSDK)
-
-### LATEST RELEASE
+### :+1: LATEST MSI RELEASE
 * [v2.2.272.0](https://github.com/PureStorage-Connect/PowerShellSDK/releases/tag/v1.17.3)
 
-### HISTORY
+###  :wave:HISTORY
 * [v2.2.272.0] Initial release
+<!-- wp:separator -->
+<hr class="wp-block-separator"/>
+<!-- /wp:separator -->
+Follow [this link](https://github.com/mikenelson-io/MSTerminal) to Mike's Windows Terminal Settings file (as requested!)
 
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>
