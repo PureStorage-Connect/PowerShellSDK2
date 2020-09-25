@@ -37,7 +37,7 @@ This repository contains the standalone MSI installer.
 
 ## :tv: VIDEOS
 ### SDK v2 Introduction video<br>
-[![](http://img.youtube.com/vi/WHJbojMHy8M/0.jpg)](http://www.youtube.com/watch?v=WHJbojMHy8M "")
+[![](http://img.youtube.com/vi/WHJbojMHy8M/0.jpg)](<iframe width="560" height="315" src="https://www.youtube.com/embed/WHJbojMHy8M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
 
 [As requested - Link to Mikes Windows Terminal Settings file](https://github.com/mikenelson-io/MSTerminal)
 
