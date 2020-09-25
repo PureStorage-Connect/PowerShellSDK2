@@ -1,7 +1,6 @@
-<p align="center"> <img src="/images/pure_powershell_sdk.png">
-</p>
 
-# Pure Storage PowerShell SDK 2
+# Pure Storage PowerShell SDK 2 &nbsp;&nbsp;&nbsp;&nbsp; <img src="/images/pure_powershell_sdk.png">
+
 
 The Pure Storage PowerShell SDK provides integration with the Purity Operating Environment and FlashArray. It provides functionalities of Purity's REST API as PowerShell cmdlets. Read more about version 2 here in our [Microsoft Platform Guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell).
 
