@@ -35,6 +35,10 @@ This repository contains the standalone MSI installer.
 <hr class="wp-block-separator"/>
 <!-- /wp:separator -->
 
+## :tv: VIDEOS
+### SDK v2 Introduction video<br>
+[![](http://img.youtube.com/vi/WHJbojMHy8M/0.jpg)](http://www.youtube.com/watch?v=WHJbojMHy8M "")
+
 [As requested - Link to Mikes Windows Terminal Settings file](https://github.com/mikenelson-io/MSTerminal)
 
 <!-- wp:separator -->
