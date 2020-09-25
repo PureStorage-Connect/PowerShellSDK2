@@ -36,8 +36,15 @@ This repository contains the standalone MSI installer.
 <!-- /wp:separator -->
 
 ## :tv: VIDEOS
-### SDK v2 Introduction video<br>
-[![](http://img.youtube.com/vi/WHJbojMHy8M/0.jpg)](<iframe width="560" height="315" src="https://www.youtube.com/embed/WHJbojMHy8M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+### SDK v2 Introduction video <br>
+[![](/images/introv2.png)](http://www.youtube.com/watch?v=WHJbojMHy8M "Pure PowerShell SDK v2")
+<br>
+### SDK v1 & SDK v2 Interoperability video <br>
+[![](/images/interop.png)](http://www.youtube.com/watch?v=R7rYRl7feGM "Pure PowerShell SDK v2")
+
+<!-- wp:separator -->
+<hr class="wp-block-separator"/>
+<!-- /wp:separator -->
 
 [As requested - Link to Mikes Windows Terminal Settings file](https://github.com/mikenelson-io/MSTerminal)
 
