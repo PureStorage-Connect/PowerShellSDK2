@@ -1,4 +1,4 @@
-Pure Storage PowerShell SDK for FlashArray 2.2 Release Notes
+// Pure Storage PowerShell SDK for FlashArray 2.2 Release Notes
 
 The Pure Storage PowerShell SDK for FlashArray provides integration with the Purity Operating Environment and the FlashArray.
 It provides the functionalities of Purity's REST API as PowerShell cmdlets.
@@ -9,7 +9,7 @@ Get the latest information about this SDK online at: https://support.purestorage
 RELEASE REQUIREMENTS AND COMPATIBILITY
 
 This release requires at least .NET Core 2.1 (https://dotnet.microsoft.com/download/dotnet-core/2.1/).
-This release is compatible with Purity FlashArrays that support Pure Storage REST API 2.0 to 2.2 inclusive.
+This release is compatible with Purity FlashArrays that support Pure Storage REST API 2.0 to 2.3 inclusive.
 This release is also compatible to be installed side by side with Pure Storage PowerShell SDK 1.x.
 This release requires a 64-bit operating system. 
 This release requires the following PowerShell versions:
@@ -23,7 +23,7 @@ Windows Server 2012R2  5.1.14409.1018
 *Mac OS                7.0.1
 *Linux                 7.0.1
 ---------------------------------------
-* Not fully tested.
+* Not all versions or distributions tested. Please see https://support.purestorage.com for more information.
 
 INSTALLATION AND REMOVAL
 The installation can be done using the following methods.
