@@ -5,7 +5,7 @@
 The Pure Storage PowerShell SDK provides integration with the Purity Operating Environment and FlashArray. It provides functionalities of Purity's REST API as PowerShell cmdlets. Read more about version 2 here in our [Microsoft Platform Guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell).
 
 This is __version 2__ of the SDK. Version 1 is still developed and support and can be found in this repository:<br>
-:octocat: [Github Repository for SDK version 2](https://www.github.com/PureStorage-Connect/PowerShellSDK)
+:octocat: [Github Repository for SDK version 1](https://www.github.com/PureStorage-Connect/PowerShellSDK)
 
 ## :floppy_disk: INSTALLATION
 There are two ways to install the SDK - via the PowerShell Gallery, or a standalone MSI installer. The recommended method for installation is to use the Install-Module cmdlet in PowerShell which will pull the latest release from the PowerShell Gallery.
