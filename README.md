@@ -31,9 +31,7 @@ This repository contains the standalone MSI installer.
 
 ### :date: HISTORY
 * [v2.2.272.0] Initial release
-<!-- wp:separator -->
-<hr class="wp-block-separator"/>
-<!-- /wp:separator -->
+
 
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>
@@ -54,6 +52,10 @@ This repository contains the standalone MSI installer.
 <!-- wp:paragraph -->
 <p>Be sure to check,&nbsp;<a href="https://code.purestorage.com/"> code.purestorage.com</a> for all our APIs, SDK, sample scripts, and more!</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator"/>
+<!-- /wp:separator -->
 
 ## :tv: VIDEOS
 ### SDK v2 Introduction video <br>
