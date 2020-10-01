@@ -18,7 +18,8 @@ This repository contains the standalone MSI installer.
 :small_orange_diamond: [Installation Package](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/PurePowerShellSDKInstaller.msi)<br>
 :small_orange_diamond: [Pure Storage Support -- Programming Interfaces > PowerShell](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)<br>
 :small_orange_diamond: [PowerShell SDK v2 to FlashArray Purity API version matrix](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/Pure_SDKv2-Purity_APIs_Matrix.csv)<br>
-:small_orange_diamond: [Downloadable Help file](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/PureStoragePowerShellSDK2-Help.html) - [View it here](https://htmlpreview.github.io/?https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/PureStoragePowerShellSDK2-Help.html)<br>
+:small_orange_diamond: [SDK v1 to v2 cmdlet matrix](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/Pure_Storage_PowerShell_SDK_v1_to_V2_cmdlet_Matrix.pdf)<br>
+:small_orange_diamond: [Downloadable Help file](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/PureStoragePowerShellSDK2-Help.html) - [View it online here](https://htmlpreview.github.io/?https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/PureStoragePowerShellSDK2-Help.html)<br>
 :small_orange_diamond: [Quick Start PowerShell SDK 2 Examples (ZIP)](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/SDK2-Examples.zip)<br>
 :small_orange_diamond: [Previous SDK version Github Repository](https://www.github.com/PureStorage-Connect/PowerShellSDK)
 
