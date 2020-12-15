@@ -39,11 +39,11 @@ This repository contains the standalone MSI installer.
 <!-- /wp:separator -->
 
 <!-- wp:paragraph -->
-<p> :wrench: To report issues or request new features, please enter them here:</em></p>
+<p> :wrench: To report issues or request new features, please enter a support ticket:</em></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p><a href="https://github.com/PureStorage-Connect/PureStoragePowerShellSDK2/issues">https://github.com/PureStorage-Connect/PowerShellSDK2/issues</a></p>
+<p><a href="https://support.purestorage.com">https://support.purestorage.com</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
