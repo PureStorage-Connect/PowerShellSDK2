@@ -39,19 +39,15 @@ This repository contains the standalone MSI installer.
 <!-- /wp:separator -->
 
 <!-- wp:paragraph -->
-<p> :wrench: To report issues or request new features, please enter an issue here:</em></p>
+<p> :wrench: <a href="https://github.com/PureStorage-Connect/PureStoragePowerShellSDK2/issues">Click here to report any issues</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p><a href="https://github.com/PureStorage-Connect/PureStoragePowerShellSDK2/issues</a></p>
+<p> :question: For questions or comments,&nbsp;<a href="https://codeinvite.purestorage.com/">join our Pure Storage Code Slack</a>&nbsp;team! Check out the #pfa-powershell channel</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p> :question: For questions,&nbsp;<a href="https://codeinvite.purestorage.com/">join our Pure Storage Code Slack</a>&nbsp;team! Check out the #pfa-powershell channel</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>Be sure to check,&nbsp;<a href="https://code.purestorage.com/"> code.purestorage.com</a> for all our APIs, SDK, sample scripts, and more!</p>
+<p>Be sure to check,&nbsp;<a href="https://code.purestorage.com/"> code.purestorage.com</a> for all our links to APIs, SDK, sample scripts, and more!</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:separator -->
