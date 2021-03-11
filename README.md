@@ -1,10 +1,10 @@
 
-# Pure Storage PowerShell SDK 2 &nbsp;&nbsp;&nbsp;&nbsp; <img src="/images/pure_powershell_sdk.png">
+# Pure Storage PowerShell SDK 2 &nbsp;&nbsp; <img src="/images/pure_powershell_sdk.png">
 
 
 The Pure Storage PowerShell SDK provides integration with the Purity Operating Environment and FlashArray. It provides functionalities of Purity's REST API as PowerShell cmdlets. Read more about version 2 here in our [Microsoft Platform Guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell).
 
-This is __version 2__ of the SDK. Version 1 is still developed and support and can be found in this repository:<br>
+This is __version 2__ of the SDK. SDK Version 1 is still developed and supported, and can be found in this repository:<br>
 :octocat: [Github Repository for SDK version 1](https://www.github.com/PureStorage-Connect/PowerShellSDK)
 
 ## :floppy_disk: INSTALLATION
@@ -20,8 +20,8 @@ This repository contains the standalone MSI installer.
 :small_orange_diamond: [PowerShell SDK v2 to FlashArray Purity API version matrix](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/Pure_SDKv2-Purity_APIs_Matrix.csv)<br>
 :small_orange_diamond: [SDK v1 to v2 cmdlet matrix](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/Pure_Storage_PowerShell_SDK_v1_to_V2_cmdlet_Matrix.pdf)<br>
 :small_orange_diamond: [Downloadable Help file](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/PureStoragePowerShellSDK2-Help.html) - [View it online here](https://htmlpreview.github.io/?https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/PureStoragePowerShellSDK2-Help.html)<br>
-:small_orange_diamond: [Quick Start PowerShell SDK 2 Examples (ZIP)](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/SDK2-Examples.zip)<br>
-:small_orange_diamond: [Previous SDK version Github Repository](https://www.github.com/PureStorage-Connect/PowerShellSDK)
+:small_orange_diamond: [Quick Start PowerShell SDK 2 Examples](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/SDK2-Examples.ps1)<br>
+:small_orange_diamond: [SDK version 1.x Github Repository](https://www.github.com/PureStorage-Connect/PowerShellSDK)
 
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>
