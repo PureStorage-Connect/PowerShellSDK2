@@ -5,6 +5,7 @@ Example PowerShell scripts for the Pure Storage PowerShell SDK
 This script is AS-IS. No warranties expressed or implied by Pure Storage or the creator.
 
 : REVISION HISTORY
+:: 04.23.2021 - Fixed the -Credential parameter from plural to singular
 :: 03.10.2021 - Added extended script and altered text for clarity. [mnelson]
 ::
 
@@ -50,7 +51,7 @@ https://<FQDN or IP Address of Array>/api/api_version
 # For these examples, we will do a simple API Token exchange.
 $Creds = Get-Credential
 # Change the <IP/FQDN> to match your array
-$FlashArray = Connect-Pfa2Array -EndPoint <IP/FQDN> -Credentials $Creds -IgnoreCertificateError
+$FlashArray = Connect-Pfa2Array -EndPoint <IP/FQDN> -Credential $Creds -IgnoreCertificateError
 # Once connected, run a few commands to verify connectivity
 Get-Pfa2Controller -Array $FlashArray
 $Controllers = Get-Pfa2Controller –Array $FlashArray
