@@ -165,7 +165,7 @@ $VolName | New-Pfa2Volume -Array $FlashArray -Provisioned $Size
 
 # View the created volumes
 $Volume = Get-Pfa2Volume -Array $FlashArray | Where-Object { $_.Name -like $VolName }
-retrun $Volume
+return $Volume
 Get-Pfa2Volume -Array $FlashArray | Where-Object { $_.Name -like $VolName } -Destroyed $False | Update-Pfa2Volume -Array $FlashArray -Destroyed $True
 
 # Delete All Volumes at once ***Dangerous***
