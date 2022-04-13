@@ -5,6 +5,7 @@ Example PowerShell scripts for the Pure Storage PowerShell SDK
 This script is AS-IS. No warranties expressed or implied by Pure Storage or the creator.
 
 : REVISION HISTORY
+:: 04.23.2021 - Fixed the -Credential parameter from plural to singular
 :: 03.10.2021 - Added extended script and altered text for clarity. [mnelson]
 ::
 
@@ -50,7 +51,7 @@ https://<FQDN or IP Address of Array>/api/api_version
 # For these examples, we will do a simple API Token exchange.
 $Creds = Get-Credential
 # Change the <IP/FQDN> to match your array
-$FlashArray = Connect-Pfa2Array -Endpoint <IP/FQDN> -Credentials $Creds -IgnoreCertificateError
+$FlashArray = Connect-Pfa2Array -EndPoint <IP/FQDN> -Credential $Creds -IgnoreCertificateError
 # Once connected, run a few commands to verify connectivity
 Get-Pfa2Controller -Array $FlashArray
 $Controllers = Get-Pfa2Controller –Array $FlashArray
@@ -164,7 +165,7 @@ $VolName | New-Pfa2Volume -Array $FlashArray -Provisioned $Size
 
 # View the created volumes
 $Volume = Get-Pfa2Volume -Array $FlashArray | Where-Object { $_.Name -like $VolName }
-retrun $Volume
+return $Volume
 Get-Pfa2Volume -Array $FlashArray | Where-Object { $_.Name -like $VolName } -Destroyed $False | Update-Pfa2Volume -Array $FlashArray -Destroyed $True
 
 # Delete All Volumes at once ***Dangerous***

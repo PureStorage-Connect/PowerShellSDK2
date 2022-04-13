@@ -185,12 +185,6 @@ $RECYCLE.BIN/
 .DS_Store
 
 
-#############
-## Python
-#############
-
-*.py[cod]
-
 # Packages
 *.egg
 *.egg-info
@@ -213,7 +207,7 @@ pip-log.txt
 #Translations
 *.mo
 
-#Mr Developer
-.mr.developer.cfg
+#Developer
 /Junk/*.*
 .vscode/settings.json
+settings.json

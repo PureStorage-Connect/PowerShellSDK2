@@ -1,6 +1,6 @@
-
 # Pure Storage PowerShell SDK 2 &nbsp;&nbsp; <img src="/images/pure_powershell_sdk.png">
 
+![GitHub all releases](https://img.shields.io/github/downloads/PureStorage-Connect/PowerShellSDK2/total?color=orange&label=GitHub%20downloads&logo=powershell&style=plastic)  ![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/PureStoragePowerShellSDK2?color=orange&label=PSGallery%20downloads&logo=powershell&style=plastic)
 
 The Pure Storage PowerShell SDK provides integration with the Purity Operating Environment and FlashArray. It provides functionalities of Purity's REST API as PowerShell cmdlets. Read more about version 2 here in our [Microsoft Platform Guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell).
 
@@ -8,10 +8,13 @@ This is __version 2__ of the SDK. SDK Version 1 is still developed and supported
 :octocat: [Github Repository for SDK version 1](https://www.github.com/PureStorage-Connect/PowerShellSDK)
 
 ## :floppy_disk: INSTALLATION
+
 There are two ways to install the SDK - via the PowerShell Gallery, or a standalone MSI installer. The recommended method for installation is to use the Install-Module cmdlet in PowerShell which will pull the latest release from the PowerShell Gallery.
+
 ```powershell
 Install-Module -Name PureStoragePowerShellSDK2
 ```
+
 This repository contains the standalone MSI installer.
 
 ### :point_down:DOWNLOADS
@@ -66,5 +69,3 @@ This repository contains the standalone MSI installer.
 <!-- /wp:separator -->
 
 [As requested - Link to Mikes Windows Terminal Settings file](https://github.com/mikenelson-io/MSTerminal)
-
-
