@@ -31,7 +31,7 @@ This repository contains the standalone MSI installer.
 <!-- /wp:separator -->
 
 ### :rocket: LATEST MSI RELEASE OF SDK 2.x
-* [v2.2.272.0](https://github.com/PureStorage-Connect/PowerShellSDK/releases/tag/v1.17.3)
+* [v2.2.279.0](https://github.com/PureStorage-Connect/PowerShellSDK2/releases/tag/v2.2.279.0)
 
 ### :date: HISTORY
 * [v2.2.272.0] Initial release
