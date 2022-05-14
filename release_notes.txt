@@ -64,7 +64,7 @@ The limitation also applies to the Update-Pfa2Kmip cmdlet when a user wants to u
     Other KMIP related cmdlets like Get-Pfa2Kmip, Delete-Pfa2Kmip, and Get-Pfa2KmipTest do not have the limitation mentioned above.
 
 FIXES
-    1. Due to a security change in Purity version 6.1.15, the New-Pfa2ArrayAuth & Invoke-Pfa2CLICommand cmdlets can not aquire a valid certificate from the array to execute a CLI command. The failure happens before the command is sent to the array.
+    1. Due to a security change in Purity version 6.1.15, the New-Pfa2ArrayAuth & Invoke-Pfa2CLICommand cmdlets can not acquire a valid certificate from the array to execute a CLI command. The failure happens before the command is sent to the array.
 
 RESOURCES
 PureStorage-Connect GitHub Repository - https://github.com/PureStorage-Connect/PowerShellSDK
