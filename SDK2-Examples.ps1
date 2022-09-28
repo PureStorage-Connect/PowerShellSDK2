@@ -247,10 +247,18 @@ Get-Pfa2VolumeSnapshot -Array $FlashArray | Where-Object { $_.Suffix -eq "JustAD
 $CommandText = "purevol create --size 10G SDK-volume-name"
 Invoke-Pfa2CLICommand -EndPoint $FlashArray -Username $FlashArrayUsername -Password $FlashArrayPassword -CommandText $CommandText
 
-# Get snapshot information, create reference pbject, & create new volume from snapshot
-$snap = Get-Pfa2VolumeSnapshot -Name test1
-$src = New-Pfa2ReferenceObject -Id $snap.Id -Name $snap.Name
-New-Pfa2Volume -Name volumecopy -Source $src
+# Get snapshot information, create reference pbject, & create new volume from snapshot using -Id parameter
+$VolName = "simple_vol.snapx"
+$Id = (Get-Pfa2VolumeSnapshot -Array $FlashArray -Name $VolName).Id
+$src_id = New-Pfa2ReferenceObject -Id $Id
+New-Pfa2Volume -Array $FlashArray -Name simplevol_copy -Source $src_id
+
+# Get snapshot information, create reference pbject, & create new volume from snapshot using -Name parameter
+$VolName = "simple_vol.snapx"
+$Name = (Get-Pfa2VolumeSnapshot -Array $FlashArray -Name $VolName).Name
+$src_name = New-Pfa2ReferenceObject -Name $Name
+New-Pfa2Volume -Array $FlashArray -Name simplevol_copy -Source $src_name 
+
 
 # Query volumes to test for eradication success
 $Volume = Get-Pfa2Volume -Array $FlashArray -Destroyed $True
