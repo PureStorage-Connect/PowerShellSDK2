@@ -21,6 +21,7 @@ Get the latest information about this SDK online [here](https://support.purestor
    | ----------- | ----------- | ----------- |
    | Windows 10 | 5.1.17134.858 | |
    | Windows 11| 5.1.22000.832 | |
+   | Windows 2022 | 5.1.20348.1 | |
    | Windows Server 2019 | 5.1.17763.1007 | |
    | Windows Server 2016 | 5.1.17763.1007 | |
    | Windows Server 2012 R2 | 5.1.14393.3471 | |
