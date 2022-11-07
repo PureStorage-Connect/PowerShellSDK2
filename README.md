@@ -16,7 +16,7 @@ The Pure Storage PowerShell SDK provides integration with the Purity Operating E
 <!-- /wp:separator -->
 
 ## :new: WHAT'S NEW
-Learn about all of the new capabilities that have been added to SDK 2.16 in the [Release Notes](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/release_notes.md).
+Learn about all of the new capabilities that have been added to SDK 2.16 in the [Release Notes](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/main/release_notes.md).
 
 <br>
 <!-- wp:separator -->
