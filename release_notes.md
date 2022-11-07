@@ -12,7 +12,7 @@ Get the latest information about this SDK online [here](https://support.purestor
 
 ## RELEASE REQUIREMENTS AND COMPATIBILITY
 * This release requires at least .NET Core 2.1 (https://dotnet.microsoft.com/download/dotnet-core/2.1/).
-* This release is compatible with Purity FlashArrays that support Pure Storage REST API 2.0 to 2.15 inclusive.
+* This release is compatible with Purity FlashArrays that support Pure Storage REST API 2.0 to 2.16 inclusive.
 * This release is also compatible to be installed side by side with Pure Storage PowerShell SDK 1.x.
 * This release requires a 64-bit operating system.
 * This release requires the following PowerShell versions:
@@ -36,16 +36,16 @@ Get the latest information about this SDK online [here](https://support.purestor
 The installation can be done using the following methods.
 
 ### POWERSHELL GALLERY
-    The Pure Storage FlashArray PowerShell SDK 2.15 can be installed via the PowerShell Gallery by using the Install-Module cmdlet: "Install-Module -Name PureStoragePowerShellSDK2"
+The Pure Storage FlashArray PowerShell SDK 2.16 can be installed via the PowerShell Gallery by using the Install-Module cmdlet: "Install-Module -Name PureStoragePowerShellSDK2"
     See https://www.powershellgallery.com/ for more details on how to discover resources on the PowerShell Gallery.
 
 ### INSTALLER MSI
-    To install the Pure Storage PowerShell SDK 2.15 via the MSI installer, extract and run PureStoragePowerShellSDK2Installer.msi, and follow the instructions. The Administrator privilege is required to perform the installation.
+To install the Pure Storage PowerShell SDK 2.16 via the MSI installer, extract and run PureStoragePowerShellSDK2Installer.msi, and follow the instructions. The Administrator privilege is required to perform the installation.
     To verify the installation, run "Get-Command -Module PureStoragePowerShellSDK2" in a new PowerShell prompt. The newly installed cmdlets should be listed.
 
 To remove the Pure Storage PowerShell SDK 2 module, perform the following based on the installation method used.
 Installed via the PowerShell Gallery: Use the "Remove-Module -Name PureStoragePowerShellSDK2" command.
-Installed via the MSI: The Pure Storage PowerShell SDK 2.15 MSI can be uninstalled from "Programs and Features" of the Control Panel.
+Installed via the MSI: The Pure Storage PowerShell SDK 2.16 MSI can be uninstalled from "Programs and Features" of the Control Panel.
 
 <br>
 <!-- wp:separator -->
@@ -87,7 +87,7 @@ However, the Pure Storage FlashArray PowerShell SDK 2.16 does not provide the fu
 
 This cmdlet will be introduced in a future release. The alternative way to realize Step 1 is to use the CLI to import the certificate. Certificate configuration is performed through the GUI (Settings > System) and CLI (purecert command).For information about the `purecert` CLI command refer to the [FlashArray CLI Reference Guide](https://support.purestorage.com/FlashArray/PurityFA/FlashArray_User_Guide)≥
 
-The Pure Storage FlashArray PowerShell SDK 2.15 also provides a way to invoke a CLI command. Other KMIP related cmdlets like Get-Pfa2Kmip, Delete-Pfa2Kmip, and Get-Pfa2KmipTest do not have the limitation mentioned above.
+The Pure Storage FlashArray PowerShell SDK 2.16 also provides a way to invoke a CLI command. Other KMIP related cmdlets like Get-Pfa2Kmip, Delete-Pfa2Kmip, and Get-Pfa2KmipTest do not have the limitation mentioned above.
 
 <br>
 <!-- wp:separator -->
@@ -107,7 +107,7 @@ The Pure Storage FlashArray PowerShell SDK 2.15 also provides a way to invoke a 
 
 ## RELEASE 2.16
 
-Release 2.15 adds more than 150 cmdlets.
+Release 2.16 adds more than 150 cmdlets.
 <br>
 
 New-Pfa2FileSystem  
