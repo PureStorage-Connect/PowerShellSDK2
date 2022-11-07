@@ -55,7 +55,6 @@ Install-Module -Name PureStoragePowerShellSDK2
 * [v2.2.276.0] Bug fix for New-Pfa2ArrayAuth and Invoke-Pfa2ClimCommand
 * [v2.2.272.0] Initial release
 <br>
-<br>
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>
 <!-- /wp:separator -->
