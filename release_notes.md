@@ -88,7 +88,7 @@ There is a limitation of the cmdlet New-Pfa2Kmip. When creating a new KMIP serve
 
 However, the Pure Storage FlashArray PowerShell SDK 2.16 does not provide the functionality of importing a certificate (as shown in Step 1). The limitation also applies to the Update-Pfa2Kmip cmdlet when a user wants to update a certificate of a specific KMIP server.
 
-This cmdlet will be introduced in a future release. The alternative way to realize Step 1 is to use the CLI to import the certificate. Certificate configuration is performed through the GUI (Settings > System) and CLI (purecert command).For information about the `purecert` CLI command refer to the [FlashArray CLI Reference Guide](https://support.purestorage.com/FlashArray/PurityFA/FlashArray_User_Guide)≥
+The alternative way to realize Step 1 is to use the CLI to import the certificate. Certificate configuration is performed through the GUI (Settings > System) and CLI (purecert command).For information about the `purecert` CLI command refer to the [FlashArray CLI Reference Guide](https://support.purestorage.com/FlashArray/PurityFA/FlashArray_User_Guide)≥
 
 The Pure Storage FlashArray PowerShell SDK 2.16 also provides a way to invoke a CLI command. Other KMIP related cmdlets like Get-Pfa2Kmip, Delete-Pfa2Kmip, and Get-Pfa2KmipTest do not have the limitation mentioned above.
 
