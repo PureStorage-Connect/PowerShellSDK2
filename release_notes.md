@@ -4,7 +4,9 @@ The Pure Storage PowerShell SDK for FlashArray provides integration with the Pur
 <br>
 <br>
 ## RELEASE NOTES
-Get the latest information about this SDK online [here](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/bbb_Microsoft_Integration_Releases/Pure_Storage_PowerShell_SDK).  
+Get the latest information about this SDK:
+* [Microsoft Platform Guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/bbb_Microsoft_Integration_Releases/Pure_Storage_PowerShell_SDK)
+* [Repository Release Notes](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/main/release_notes.md)
 <br>
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>
