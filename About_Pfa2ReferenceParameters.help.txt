@@ -1,0 +1,210 @@
+TOPIC
+    about_Pfa2ReferenceParameters
+
+SHORT DESCRIPTION
+    Describes backwards compatibility issues with Reference parameters.
+
+LONG DESCRIPTION
+    In the previous releases (PureStoragePowerShellSDK2 2.2) of the SDK, some cmdlets had
+    so-called "Reference" parameters. For each reference parameter, there was a corresponding
+    cmdlet to create the reference object. (e.g. New-Pfa2ReferenceObject).
+    Not only were these poorly documented, but it made using these cmdlets awkward.
+
+    For this release, all of these reference parameter types have been folded into 
+    the direct parameters for each cmdlet.
+
+    The cmdlets that are affected:
+        New-Pfa2Connection                  
+        New-Pfa2Host                        
+        New-Pfa2Host                        
+        New-Pfa2Offload                     
+        New-Pfa2Offload                     
+        New-Pfa2Offload                     
+        New-Pfa2Offload                     
+        New-Pfa2Pod                         
+        New-Pfa2Pod                         
+        New-Pfa2Volume                      
+        New-Pfa2Volume                      
+        New-Pfa2VolumeGroup                 
+        Set-Pfa2VolumeSnapshotTagsBatch     
+        Set-Pfa2VolumeTagBatch              
+        Update-Pfa2ArrayEula                
+        Update-Pfa2DirectoryService         
+        Update-Pfa2Host                     
+        Update-Pfa2Host                     
+        Update-Pfa2Pod                      
+        Update-Pfa2ProtectionGroup          
+        Update-Pfa2ProtectionGroup          
+        Update-Pfa2ProtectionGroup          
+        Update-Pfa2ProtectionGroup          
+        Update-Pfa2RemoteProtectionGroup    
+        Update-Pfa2Volume                   
+        Update-Pfa2Volume                   
+        Update-Pfa2Volume                   
+        Update-Pfa2VolumeGroup              
+
+
+    The following is a list of each cmdlet, the reference parameter that has been removed, and the new
+    parameters that take their place.
+
+        Cmdlet New-Pfa2Connection
+            Parameter ProtocolEndpoint
+                -ProtocolEndpointId <String>
+                -ProtocolEndpointName <String>
+
+        Cmdlet New-Pfa2Host
+            Parameter Chap
+                -ChapHostPassword <String>
+                -ChapHostUser <String>
+                -ChapTargetPassword <String>
+                -ChapTargetUser <String>
+
+            Parameter PreferredArrays
+                -PreferredArraysId <List<String>>
+                -PreferredArraysName <List<String>>
+
+        Cmdlet New-Pfa2Offload
+            Parameter AmazonS3
+                -AmazonS3AccessKeyId <String>
+                -AmazonS3Bucket <String>
+                -AmazonS3PlacementStrategy <String>
+                -AmazonS3SecretAccessKey <String>
+                -AmazonS3Uri <String>
+
+            Parameter Azure
+                -AzureAccountName <String>
+                -AzureContainerName <String>
+                -AzureSecretAccessKey <String>
+
+            Parameter GoogleCloud
+                -GoogleCloudAccessKeyId <String>
+                -GoogleCloudBucket <String>
+                -GoogleCloudSecretAccessKey <String>
+
+            Parameter Nfs
+                -NfsAddress <String>
+                -NfsMountOptions <String>
+                -NfsMountPoint <String>
+
+        Cmdlet New-Pfa2Pod
+            Parameter FailoverPreferences
+                -FailoverPreferencesId <List<String>>
+                -FailoverPreferencesName <List<String>>
+
+            Parameter Source
+                -SourceId <String>
+                -SourceName <String>
+
+        Cmdlet New-Pfa2Volume
+            Parameter Qos
+                -QosBandwidthLimit <Object>
+                -QosBandwidthLimitReset [<SwitchParameter>]
+                -QosIopsLimit <Object>
+                -QosIopsLimitReset [<SwitchParameter>]
+
+            Parameter Source
+                -SourceId <String>
+                -SourceName <String>
+
+        Cmdlet New-Pfa2VolumeGroup
+            Parameter Qos
+                -QosBandwidthLimit <Object>
+                -QosBandwidthLimitReset [<SwitchParameter>]
+                -QosIopsLimit <Object>
+                -QosIopsLimitReset [<SwitchParameter>]
+
+        Cmdlet Set-Pfa2VolumeSnapshotTagsBatch
+            Parameter Tag
+                -TagCopyable <List<Boolean>>
+                -TagKey <List<String>>
+                -TagNamespace <List<String>>
+                -TagResourceId <List<String>>
+                -TagResourceName <List<String>>
+                -TagValue <List<String>>
+
+        Cmdlet Set-Pfa2VolumeTagBatch
+            Parameter Tag
+                -TagCopyable <List<Boolean>>
+                -TagKey <List<String>>
+                -TagNamespace <List<String>>
+                -TagResourceId <List<String>>
+                -TagResourceName <List<String>>
+                -TagValue <List<String>>
+
+        Cmdlet Update-Pfa2ArrayEula
+            Parameter Signature
+                -SignatureAccepted <DateTime>
+                -SignatureCompany <String>
+                -SignatureName <String>
+                -SignatureTitle <String>
+
+        Cmdlet Update-Pfa2DirectoryService
+            Parameter Management
+                -ManagementUserLoginAttribute <String>
+                -ManagementUserObjectClass <String>
+
+        Cmdlet Update-Pfa2Host
+            Parameter Chap
+                -ChapHostPassword <String>
+                -ChapHostUser <String>
+                -ChapTargetPassword <String>
+                -ChapTargetUser <String>
+
+            Parameter PreferredArrays
+                -PreferredArraysId <List<String>>
+                -PreferredArraysName <List<String>>
+
+        Cmdlet Update-Pfa2Pod
+            Parameter FailoverPreferences
+                -FailoverPreferencesId <List<String>>
+                -FailoverPreferencesName <List<String>>
+
+        Cmdlet Update-Pfa2ProtectionGroup
+            Parameter ReplicationScheduleBlackout
+                -ReplicationScheduleBlackoutEnd <Int64>
+                -ReplicationScheduleBlackoutStart <Int64>
+
+            Parameter SnapshotSchedule
+                -SnapshotScheduleAt <Int64>
+                -SnapshotScheduleEnabled <Boolean>
+                -SnapshotScheduleFrequency <Int64>
+
+            Parameter SourceRetention
+                -SourceRetentionAllForSec <Int32>
+                -SourceRetentionDays <Int32>
+                -SourceRetentionPerDay <Int32>
+
+            Parameter TargetRetention
+                -TargetRetentionAllForSec <Int32>
+                -TargetRetentionDays <Int32>
+                -TargetRetentionPerDay <Int32>
+
+        Cmdlet Update-Pfa2RemoteProtectionGroup
+            Parameter TargetRetention
+                -TargetRetentionAllForSec <Int32>
+                -TargetRetentionDays <Int32>
+                -TargetRetentionPerDay <Int32>
+
+        Cmdlet Update-Pfa2Volume
+            Parameter Pod
+                -PodId <String>
+                -PodName <String>
+
+            Parameter Qos
+                -QosBandwidthLimit <Object>
+                -QosBandwidthLimitReset [<SwitchParameter>]
+                -QosIopsLimit <Object>
+                -QosIopsLimitReset [<SwitchParameter>]
+
+            Parameter VolumeGroup
+                -VolumeGroupId <String>
+                -VolumeGroupName <String>
+
+        Cmdlet Update-Pfa2VolumeGroup
+            Parameter Qos
+                -QosBandwidthLimit <Object>
+                -QosBandwidthLimitReset [<SwitchParameter>]
+                -QosIopsLimit <Object>
+                -QosIopsLimitReset [<SwitchParameter>]
+
+

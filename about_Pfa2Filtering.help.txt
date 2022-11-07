@@ -2,14 +2,14 @@ TOPIC
     about_Pfa2Filtering
 
 SHORT DESCRIPTION
-    Describes how the Pure Storage PowerShell SDK cmdlets support filtering to narrow down results.
+    Describes how the Pure Storage PowerShell SDK2 cmdlets support filtering to narrow down results.
 
 LONG DESCRIPTION
-    The Pure Storage PowerShell SDK supports filtering for various methods that might return multiple objects. The filter query parameter narrows down the results of a request to only the response objects that satisfy the filter criteria. Cmdlets that support filtering expose the -Filter parameter that takes a string representing the filter criteria.
+    The Pure Storage PowerShell SDK2 supports filtering for various methods that might return multiple objects. The filter query parameter narrows down the results of a request to only the response objects that satisfy the filter criteria. Cmdlets that support filtering expose the -Filter parameter that takes a string representing the filter criteria.
     
     FILTERING WITH OPERATORS
     
-    The Pure Storage PowerShell SDK filter parameter supports common comparison operators.
+    The Pure Storage PowerShell SDK2 filter parameter supports common comparison operators.
 
     Syntax: -Filter <field_name> <operator> <field_value> 
 
@@ -47,7 +47,7 @@ LONG DESCRIPTION
 
     FILTERING WITH FUNCTIONS
     
-    The Pure Storage PowerShell SDK filter parameter supports the CONTAINS and NOT functions.
+    The Pure Storage PowerShell SDK2 filter parameter supports the CONTAINS and NOT functions.
     
     Syntax: -Filter function(parameters)
     
@@ -66,7 +66,7 @@ LONG DESCRIPTION
 
     FILTERING WITH EXISTENCE CHECKS
     
-    PureStoragePowerShellSDK filter parameter supports existence checks. For example, the operation Get-Pfa2Volume $arr -Filter "source" returns volumes where the "source" exists for the volume.
+    PureStoragePowerShellSDK2 filter parameter supports existence checks. For example, the operation Get-Pfa2Volume $arr -Filter "source" returns volumes where the "source" exists for the volume.
                 
 EXAMPLES
 
@@ -98,4 +98,4 @@ KEYWORDS
 
 
 SEE ALSO
-    See the "Sorting, Filtering, and Pagination" section of the FlashArray REST API guide. 
+    See the "Sorting, Filtering, and Pagination" section of the FlashArray REST API guide.
