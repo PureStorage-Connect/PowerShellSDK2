@@ -7,7 +7,7 @@ The Pure Storage PowerShell SDK provides integration with the Purity Operating E
 <br>
 | Information |
 | ----------- |
-| The [Pure Storage PowerShell SDK 1.19](https://www.github.com/PureStorage-Connect/PowerShellSDK) is available and supported. There will no future development on the 1.x versions of the SDK. All development will be focused on supporting the REST API 2.x and greater.|
+| The [Pure Storage PowerShell SDK 1.19](https://www.github.com/PureStorage-Connect/PowerShellSDK) is available and supported. There will be no future development on the 1.x versions of the SDK. All development is focused on supporting Purity REST API 2.x and greater.|
 | We have an open-source project, [Pure Storage PowerShell Toolkit](https://github.com/PureStorage-OpenConnect/powershell-toolkit) that provides additional cmdlets to perform operations like testing Windows Server best practices, creating reports, remove pending deletes and more. We are always looking for contributions and feature requests. 
 <br>
 
