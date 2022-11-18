@@ -50,7 +50,7 @@ Install-Module -Name PureStoragePowerShellSDK2
 <!-- /wp:separator -->
 
 ### :mega: LATEST MSI RELEASE OF SDK 2.x
-* [v2.16.11.0](https://github.com/PureStorage-Connect/PowerShellSDK2/releases/tag/v2.16.11.0)
+* [v2.16.12.0](https://github.com/PureStorage-Connect/PowerShellSDK2/releases/tag/v2.16.12.0)
 
 ### :date: HISTORY
 * [v2.2.276.0] Bug fix for New-Pfa2ArrayAuth and Invoke-Pfa2ClimCommand
