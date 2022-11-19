@@ -51,7 +51,10 @@ LONG DESCRIPTION
         Time to wait after writing public key before reading response from pureapiclient create. 
         The default value is 5ms. 
                 
-                
+    PureRest.LoggingToArrayEnabled:
+        Can be set to false to disable logging REST commands to the array.
+        The default value is true.                
+
 EXAMPLES
 
     Example 1: Set the default HTTP timeout to 60 seconds
