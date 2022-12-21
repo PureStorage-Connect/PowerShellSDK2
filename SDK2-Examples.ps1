@@ -50,7 +50,7 @@ https://<FQDN or IP Address of Array>/api/api_version
 # For these examples, we will do a simple API Token exchange.
 $Creds = Get-Credential
 # Change the <IP/FQDN> to match your array
-$FlashArray = Connect-Pfa2Array -EndPoint <IP/FQDN> -Credentials $Creds -IgnoreCertificateError
+$FlashArray = Connect-Pfa2Array -EndPoint <IP/FQDN> -Credential $Creds -IgnoreCertificateError
 # Once connected, run a few commands to verify connectivity
 Get-Pfa2Controller -Array $FlashArray
 $Controllers = Get-Pfa2Controller –Array $FlashArray
