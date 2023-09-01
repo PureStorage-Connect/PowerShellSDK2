@@ -1,4 +1,4 @@
-# Pure Storage PowerShell SDK 2.16 &nbsp;&nbsp; <img src="/images/pure_powershell_sdk.png">
+# Pure Storage PowerShell SDK 2.24 &nbsp;&nbsp; <img src="/images/pure_powershell_sdk.png">
 
 ![GitHub all releases](https://img.shields.io/github/downloads/PureStorage-Connect/PowerShellSDK2/total?color=orange&label=GitHub%20downloads&logo=powershell&style=plastic)  ![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/PureStoragePowerShellSDK2?color=orange&label=PSGallery%20downloads&logo=powershell&style=plastic)
 
@@ -16,7 +16,7 @@ The Pure Storage PowerShell SDK provides integration with the Purity Operating E
 <!-- /wp:separator -->
 
 ## :new: WHAT'S NEW
-Learn about all of the new capabilities that have been added to SDK 2.16 in the [Release Notes](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/main/release_notes.md).
+Learn about all of the new capabilities that have been added to SDK 2.24 in the [Release Notes](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/main/release_notes.md).
 
 <br>
 <!-- wp:separator -->
@@ -38,7 +38,7 @@ Install-Module -Name PureStoragePowerShellSDK2
 <!-- /wp:separator -->
 
 ### :arrow_down: DOWNLOADS
-:radio_button: [Installation Package](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/PurePowerShellSDKInstaller.msi)<br>
+:radio_button: [Installation Package](https://github.com/PureStorage-Connect/PowerShellSDK2/releases/download/v2.24.70/PureStoragePowerShellSDK_2_24_Installer.msi)<br>
 :radio_button: [Pure Storage Support -- Programming Interfaces > PowerShell](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)<br>
 :radio_button: [Quick Start PowerShell SDK 2 Examples](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/SDK2-Examples.ps1)<br>
 :radio_button: [Downloadable SDK v2 HTML Help file](http://htmlpreview.github.io/?https://github.com/PureStorage-Connect/PowerShellSDK2/blob/main/PureStoragePowerShellSDK2-Help.html)<br>
@@ -50,7 +50,7 @@ Install-Module -Name PureStoragePowerShellSDK2
 <!-- /wp:separator -->
 
 ### :mega: LATEST MSI RELEASE OF SDK 2.x
-* [v2.16.12.0](https://github.com/PureStorage-Connect/PowerShellSDK2/releases/tag/v2.16.12.0)
+* [v2.24.70](https://github.com/PureStorage-Connect/PowerShellSDK2/releases/tag/v2.24.70)
 
 ### :date: HISTORY
 * [v2.2.276.0] Bug fix for New-Pfa2ArrayAuth and Invoke-Pfa2ClimCommand
