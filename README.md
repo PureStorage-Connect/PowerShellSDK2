@@ -31,7 +31,9 @@ This is the __recommended__ method for installation. Using this method will pull
 ```powershell
 Install-Module -Name PureStoragePowerShellSDK2
 ```
-2. Standalone Windows Installer Package (MSI)  
+2. Standalone Windows Installer Package (MSI)
+* [v2.24.70](https://github.com/PureStorage-Connect/PowerShellSDK2/releases/tag/v2.24.70)
+
 <br>
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>
@@ -44,14 +46,6 @@ Install-Module -Name PureStoragePowerShellSDK2
 :radio_button: [Downloadable SDK v2 HTML Help file](http://htmlpreview.github.io/?https://github.com/PureStorage-Connect/PowerShellSDK2/blob/main/PureStoragePowerShellSDK2-Help.html)<br>
 :radio_button: [SDK version 1.x Github Repository](https://www.github.com/PureStorage-Connect/PowerShellSDK)
 <br>
-<br>
-<!-- wp:separator -->
-<hr class="wp-block-separator"/>
-<!-- /wp:separator -->
-
-### :mega: LATEST MSI RELEASE OF SDK 2.x
-* [v2.24.70](https://github.com/PureStorage-Connect/PowerShellSDK2/releases/tag/v2.24.70)
-
 <br>
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>
