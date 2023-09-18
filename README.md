@@ -32,7 +32,7 @@ This is the __recommended__ method for installation. Using this method will pull
 Install-Module -Name PureStoragePowerShellSDK2
 ```
 2. Standalone Windows Installer Package (MSI)
-* [v2.24.70](https://github.com/PureStorage-Connect/PowerShellSDK2/releases/tag/v2.24.70)
+* [Latest MSI Release](https://github.com/PureStorage-Connect/PowerShellSDK2/releases)
 
 <br>
 <!-- wp:separator -->
