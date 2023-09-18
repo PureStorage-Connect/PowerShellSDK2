@@ -39,13 +39,11 @@ Install-Module -Name PureStoragePowerShellSDK2
 <hr class="wp-block-separator"/>
 <!-- /wp:separator -->
 
-### :arrow_down: DOWNLOADS
-:radio_button: [Installation Package](https://github.com/PureStorage-Connect/PowerShellSDK2/releases/download/v2.24.70/PureStoragePowerShellSDK_2_24_Installer.msi)<br>
+### :arrow_down: RESOURCES
 :radio_button: [Pure Storage Support -- Programming Interfaces > PowerShell](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)<br>
 :radio_button: [Quick Start PowerShell SDK 2 Examples](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/SDK2-Examples.ps1)<br>
 :radio_button: [Downloadable SDK v2 HTML Help file](http://htmlpreview.github.io/?https://github.com/PureStorage-Connect/PowerShellSDK2/blob/main/PureStoragePowerShellSDK2-Help.html)<br>
 :radio_button: [SDK version 1.x Github Repository](https://www.github.com/PureStorage-Connect/PowerShellSDK)
-<br>
 <br>
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>
