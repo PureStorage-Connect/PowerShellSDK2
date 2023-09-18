@@ -95,7 +95,7 @@ EXAMPLES
         Get-Pfa2Volume $arr -Filter "not(source)"
         
 KEYWORDS
-
+    filtwer, filtering, PowerShell, SDK, SDK2, PureStorage,FlashArray
 
 SEE ALSO
     See the "Sorting, Filtering, and Pagination" section of the FlashArray REST API guide.
