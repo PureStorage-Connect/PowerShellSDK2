@@ -5,12 +5,12 @@ SHORT DESCRIPTION
     Describes backwards compatibility issues with Reference parameters.
 
 LONG DESCRIPTION
-    In the previous releases (PureStoragePowerShellSDK2 2.2) of the SDK, some cmdlets had
+    In the previous releases (PureStoragePowerShellSDK2 v2.2) of the SDK, some cmdlets had
     so-called "Reference" parameters. For each reference parameter, there was a corresponding
     cmdlet to create the reference object. (e.g. New-Pfa2ReferenceObject).
     Not only were these poorly documented, but it made using these cmdlets awkward.
 
-    For this release, all of these reference parameter types have been folded into 
+    For the 2.16.17 release, all of these reference parameter types have been folded into 
     the direct parameters for each cmdlet.
 
     The cmdlets that are affected:
