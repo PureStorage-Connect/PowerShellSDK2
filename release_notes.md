@@ -85,7 +85,39 @@ Pure Storage Code Website - https://code.purestorage.com
 
 ## RELEASE 2.24
 
-Release 2.24 adds more than 30 cmdlets.  
+Release 2.24 adds more than 30 cmdlets:
+Get-Pfa2AlertRule
+Get-Pfa2AlertRuleCatalog
+Get-Pfa2ArraysPerformanceByLink
+Get-Pfa2DirectoryPolicyAutodir
+Get-Pfa2DirectoryServiceLocalGroup
+Get-Pfa2DirectoryServiceLocalGroupMember
+Get-Pfa2DirectoryServiceLocalUser
+Get-Pfa2DirectoryServiceLocalUserMember
+Get-Pfa2NetworkInterfaceNeighbor
+Get-Pfa2PolicyAutodir
+Get-Pfa2PolicyAutodirMember
+Get-Pfa2SoftwarePatch
+Get-Pfa2SoftwarePatchCatalog
+New-Pfa2AlertRule
+New-Pfa2DirectoryPolicyAutodir
+New-Pfa2DirectoryServiceLocalGroup
+New-Pfa2DirectoryServiceLocalGroupMember
+New-Pfa2DirectoryServiceLocalUser
+New-Pfa2DirectoryServiceLocalUserMember
+New-Pfa2PolicyAutodir
+New-Pfa2PolicyAutodirMember
+Remove-Pfa2AlertRule
+Remove-Pfa2DirectoryPolicyAutodir
+Remove-Pfa2DirectoryServiceLocalGroup
+Remove-Pfa2DirectoryServiceLocalUser
+Remove-Pfa2DirectoryServiceLocalUserMember
+Remove-Pfa2PolicyAutodir
+Remove-Pfa2PolicyAutodirMember
+Update-Pfa2AlertRule
+Update-Pfa2DirectoryServiceLocalGroup
+Update-Pfa2DirectoryServiceLocalUser
+Update-Pfa2PolicyAutodir
 
 
 ## BACKWARDS COMPATIBILITY
