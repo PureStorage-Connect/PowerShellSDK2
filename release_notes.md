@@ -55,80 +55,80 @@ Pure Storage Code Website - https://code.purestorage.com
 ## RELEASE CHANGES
 
 On this releases we added the following 22 new cmdlet(s):
-	Remove-Pfa2DirectoryServiceLocalGroupMember
-	New-Pfa2DirectoryLockNlmReclamation
-	New-Pfa2Files
-	New-Pfa2ProtectionGroupSnapshotReplica
-	New-Pfa2ProtectionGroupSnapshotTest
-	New-Pfa2RemoteProtectionGroupSnapshotTest
-	New-Pfa2SoftwarePatch
-	Get-Pfa2Subscription
-	Get-Pfa2SubscriptionAsset
-	Get-Pfa2Vchost
-	New-Pfa2Vchost
-	Update-Pfa2Vchost
-	Remove-Pfa2Vchost
-	Get-Pfa2VchostCertificate
-	New-Pfa2VchostCertificate
-	Update-Pfa2VchostCertificate
-	Remove-Pfa2VchostCertificate
-	Get-Pfa2VchostEndpoint
-	New-Pfa2VchostEndpoint
-	Update-Pfa2VchostEndpoint
-	Remove-Pfa2VchostEndpoint
-	New-Pfa2VolumeSnapshotTest
+-	Remove-Pfa2DirectoryServiceLocalGroupMember
+-	New-Pfa2DirectoryLockNlmReclamation
+-	New-Pfa2Files
+-	New-Pfa2ProtectionGroupSnapshotReplica
+-	New-Pfa2ProtectionGroupSnapshotTest
+-	New-Pfa2RemoteProtectionGroupSnapshotTest
+-	New-Pfa2SoftwarePatch
+-	Get-Pfa2Subscription
+-	Get-Pfa2SubscriptionAsset
+-	Get-Pfa2Vchost
+-	New-Pfa2Vchost
+-	Update-Pfa2Vchost
+-	Remove-Pfa2Vchost
+-	Get-Pfa2VchostCertificate
+-	New-Pfa2VchostCertificate
+-	Update-Pfa2VchostCertificate
+-	Remove-Pfa2VchostCertificate
+-	Get-Pfa2VchostEndpoint
+-	New-Pfa2VchostEndpoint
+-	Update-Pfa2VchostEndpoint
+-	Remove-Pfa2VchostEndpoint
+-	New-Pfa2VolumeSnapshotTest
 
 The following 47 cmdlet(s) have new parameters:
-	'Update-Pfa2Array' have the following new parameter(s): [NtpSymmetricKey, EradicationConfigDisabledDelay, EradicationConfigEnabledDelay]
-	'Update-Pfa2ContainerDefaultProtection' have the following new parameter(s): [DefaultProtectionsId]
-	'Get-Pfa2HostGroupProtectionGroup' have the following new parameter(s): [GroupId]
-	'New-Pfa2HostGroupProtectionGroup' have the following new parameter(s): [GroupId]
-	'Remove-Pfa2HostGroupProtectionGroup' have the following new parameter(s): [GroupId]
-	'Get-Pfa2HostProtectionGroup' have the following new parameter(s): [GroupId]
-	'New-Pfa2HostProtectionGroup' have the following new parameter(s): [GroupId]
-	'Remove-Pfa2HostProtectionGroup' have the following new parameter(s): [GroupId]
-	'New-Pfa2Offload' have the following new parameter(s): [AzureProfile, GoogleCloudAuthRegion, GoogleCloudProfile, NfsProfile, AmazonS3AuthRegion, AmazonS3Profile]
-	'Update-Pfa2PolicyNfs' have the following new parameter(s): [NfsVersion]
-	'New-Pfa2PolicyNfsClientRule' have the following new parameter(s): [RulesNfsVersion]
-	'Get-Pfa2ProtectionGroup' have the following new parameter(s): [Id]
-	'New-Pfa2ProtectionGroup' have the following new parameter(s): [SourceId]
-	'Update-Pfa2ProtectionGroup' have the following new parameter(s): [Id]
-	'Remove-Pfa2ProtectionGroup' have the following new parameter(s): [Id]
-	'Get-Pfa2ProtectionGroupHost' have the following new parameter(s): [GroupId]
-	'New-Pfa2ProtectionGroupHost' have the following new parameter(s): [GroupId]
-	'Remove-Pfa2ProtectionGroupHost' have the following new parameter(s): [GroupId]
-	'Get-Pfa2ProtectionGroupHostGroup' have the following new parameter(s): [GroupId]
-	'New-Pfa2ProtectionGroupHostGroup' have the following new parameter(s): [GroupId]
-	'Remove-Pfa2ProtectionGroupHostGroup' have the following new parameter(s): [GroupId]
-	'Get-Pfa2ProtectionGroupPerformanceReplication' have the following new parameter(s): [Id]
-	'Get-Pfa2ProtectionGroupPerformanceReplicationByArray' have the following new parameter(s): [Id]
-	'Get-Pfa2ProtectionGroupSpace' have the following new parameter(s): [Id]
-	'Get-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
-	'New-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
-	'Update-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
-	'Remove-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
-	'Get-Pfa2ProtectionGroupVolume' have the following new parameter(s): [GroupId]
-	'New-Pfa2ProtectionGroupVolume' have the following new parameter(s): [GroupId]
-	'Remove-Pfa2ProtectionGroupVolume' have the following new parameter(s): [GroupId]
-	'Get-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [Id, SourceId]
-	'New-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [AllowThrottle, SourceId]
-	'Update-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [Id]
-	'Remove-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [Id]
-	'Get-Pfa2ProtectionGroupSnapshotTransfer' have the following new parameter(s): [Id, SourceId]
-	'Get-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [Id, SourceId]
-	'New-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [AllowThrottle, SourceId]
-	'Update-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [Id]
-	'Remove-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [Id]
-	'Get-Pfa2RemoteProtectionGroupSnapshotTransfer' have the following new parameter(s): [Id, SourceId]
-	'New-Pfa2Volume' have the following new parameter(s): [AddToProtectionGroupIds]
-	'Update-Pfa2Volume' have the following new parameter(s): [AddToProtectionGroupIds, RemoveFromProtectionGroupIds]
-	'Get-Pfa2VolumeProtectionGroup' have the following new parameter(s): [GroupId]
-	'New-Pfa2VolumeProtectionGroup' have the following new parameter(s): [GroupId]
-	'Remove-Pfa2VolumeProtectionGroup' have the following new parameter(s): [GroupId]
-	'New-Pfa2VolumeSnapshot' have the following new parameter(s): [AllowThrottle]
+-	'Update-Pfa2Array' have the following new parameter(s): [NtpSymmetricKey, EradicationConfigDisabledDelay, EradicationConfigEnabledDelay]
+-	'Update-Pfa2ContainerDefaultProtection' have the following new parameter(s): [DefaultProtectionsId]
+-	'Get-Pfa2HostGroupProtectionGroup' have the following new parameter(s): [GroupId]
+-	'New-Pfa2HostGroupProtectionGroup' have the following new parameter(s): [GroupId]
+-	'Remove-Pfa2HostGroupProtectionGroup' have the following new parameter(s): [GroupId]
+-	'Get-Pfa2HostProtectionGroup' have the following new parameter(s): [GroupId]
+-	'New-Pfa2HostProtectionGroup' have the following new parameter(s): [GroupId]
+-	'Remove-Pfa2HostProtectionGroup' have the following new parameter(s): [GroupId]
+-	'New-Pfa2Offload' have the following new parameter(s): [AzureProfile, GoogleCloudAuthRegion, GoogleCloudProfile, NfsProfile, AmazonS3AuthRegion, AmazonS3Profile]
+-	'Update-Pfa2PolicyNfs' have the following new parameter(s): [NfsVersion]
+-	'New-Pfa2PolicyNfsClientRule' have the following new parameter(s): [RulesNfsVersion]
+-	'Get-Pfa2ProtectionGroup' have the following new parameter(s): [Id]
+-	'New-Pfa2ProtectionGroup' have the following new parameter(s): [SourceId]
+-	'Update-Pfa2ProtectionGroup' have the following new parameter(s): [Id]
+-	'Remove-Pfa2ProtectionGroup' have the following new parameter(s): [Id]
+-	'Get-Pfa2ProtectionGroupHost' have the following new parameter(s): [GroupId]
+-	'New-Pfa2ProtectionGroupHost' have the following new parameter(s): [GroupId]
+-	'Remove-Pfa2ProtectionGroupHost' have the following new parameter(s): [GroupId]
+-	'Get-Pfa2ProtectionGroupHostGroup' have the following new parameter(s): [GroupId]
+-	'New-Pfa2ProtectionGroupHostGroup' have the following new parameter(s): [GroupId]
+-	'Remove-Pfa2ProtectionGroupHostGroup' have the following new parameter(s): [GroupId]
+-	'Get-Pfa2ProtectionGroupPerformanceReplication' have the following new parameter(s): [Id]
+-	'Get-Pfa2ProtectionGroupPerformanceReplicationByArray' have the following new parameter(s): [Id]
+-	'Get-Pfa2ProtectionGroupSpace' have the following new parameter(s): [Id]
+-	'Get-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
+-	'New-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
+-	'Update-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
+-	'Remove-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
+-	'Get-Pfa2ProtectionGroupVolume' have the following new parameter(s): [GroupId]
+-	'New-Pfa2ProtectionGroupVolume' have the following new parameter(s): [GroupId]
+-	'Remove-Pfa2ProtectionGroupVolume' have the following new parameter(s): [GroupId]
+-	'Get-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [Id, SourceId]
+-	'New-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [AllowThrottle, SourceId]
+-	'Update-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [Id]
+-	'Remove-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [Id]
+-	'Get-Pfa2ProtectionGroupSnapshotTransfer' have the following new parameter(s): [Id, SourceId]
+-	'Get-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [Id, SourceId]
+-	'New-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [AllowThrottle, SourceId]
+-	'Update-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [Id]
+-	'Remove-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [Id]
+-	'Get-Pfa2RemoteProtectionGroupSnapshotTransfer' have the following new parameter(s): [Id, SourceId]
+-	'New-Pfa2Volume' have the following new parameter(s): [AddToProtectionGroupIds]
+-	'Update-Pfa2Volume' have the following new parameter(s): [AddToProtectionGroupIds, RemoveFromProtectionGroupIds]
+-	'Get-Pfa2VolumeProtectionGroup' have the following new parameter(s): [GroupId]
+-	'New-Pfa2VolumeProtectionGroup' have the following new parameter(s): [GroupId]
+-	'Remove-Pfa2VolumeProtectionGroup' have the following new parameter(s): [GroupId]
+-	'New-Pfa2VolumeSnapshot' have the following new parameter(s): [AllowThrottle]
 
 The following 1 cmdlet(s) had parameters dropped:
-	'Update-Pfa2SnmpAgent' dropped the following parameter(s): [SnmpAgentName]
+-	'Update-Pfa2SnmpAgent' dropped the following parameter(s): [SnmpAgentName]
 
 ## BACKWARDS COMPATIBILITY
 From 2.24 release:
