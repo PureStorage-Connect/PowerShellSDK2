@@ -1,4 +1,4 @@
-# Pure Storage PowerShell SDK for FlashArray 2.24 Release Notes
+# Pure Storage PowerShell SDK for FlashArray 2.26.63 Release Notes
 
 The Pure Storage PowerShell SDK for FlashArray provides integration with the Purity Operating Environment and the FlashArray.  
 It provides the functionalities of Purity's REST API as PowerShell cmdlets.  
@@ -9,7 +9,7 @@ Get the latest information about this SDK online at: https://support.purestorage
 ##  RELEASE REQUIREMENTS AND COMPATIBILITY
 
 This release requires at least .NET Core 2.1 (https://dotnet.microsoft.com/download/dotnet-core/2.1/).  
-This release is compatible with Purity FlashArrays that support Pure Storage REST API 2.0 to 2.24 inclusive.  
+This release is compatible with Purity FlashArrays that support Pure Storage REST API 2.0 to 2.26 inclusive.  
 This release is also compatible to be installed side by side with Pure Storage PowerShell SDK 1.x.  
 This release requires a 64-bit operating system.  
 This release requires the following PowerShell versions:  
@@ -27,19 +27,19 @@ This release requires the following PowerShell versions:
 The installation can be done using the following methods.
 
 ### POWERSHELL GALLERY
-The Pure Storage FlashArray PowerShell SDK 2.24 can be installed via the PowerShell Gallery by using the Install-Module cmdlet:  
+The Pure Storage FlashArray PowerShell SDK 2.26 can be installed via the PowerShell Gallery by using the Install-Module cmdlet:  
 ```
 Install-Module -Name PureStoragePowerShellSDK2
 ```
 See https://www.powershellgallery.com/ for more details on how to discover resources on the PowerShell Gallery.  
 
-### INSTALLER MSI
-To install the Pure Storage PowerShell SDK 2.24 via the MSI installer, extract and run PureStoragePowerShellSDK2Installer.msi, and follow the instructions. The Administrator privilege is required to perform the installation.  
+### INSTALLER MSI - WILL BE DEPRECATED IN A FUTURE RELEASE
+To install the Pure Storage PowerShell SDK 2.26 via the MSI installer, extract and run PureStoragePowerShellSDK2Installer.msi, and follow the instructions. The Administrator privilege is required to perform the installation.  
 To verify the installation, run `Get-Command -Module PureStoragePowerShellSDK2` in a new PowerShell prompt. The newly installed cmdlets should be listed.  
 
 To remove the Pure Storage PowerShell SDK 2 module, perform the following based on the installation method used.  
 Installed via the PowerShell Gallery: Use the `Remove-Module -Name PureStoragePowerShellSDK2` command.  
-Installed via the MSI: The Pure Storage PowerShell SDK 2.15 MSI can be uninstalled from "Programs and Features" of the Control Panel.  
+Installed via the MSI: The Pure Storage PowerShell SDK 2.26 MSI can be uninstalled from "Programs and Features" of the Control Panel.  
 
 
 ## CMDLET HELP
@@ -48,79 +48,93 @@ Get help using `Get-Help -Name Get-Pfa2Volume` for cmdlet Get-Pfa2Volume.
 To find what about topics are available: `Get-Help -Name About_Pfa2*`  
 
 ## KNOWN ISSUES IN THIS RELEASE
-### New-Pfa2Kmip
-There is a limitation of the cmdlet New-Pfa2Kmip. When creating a new KMIP server, a certificate is required.  
-The mandatory parameter -Certificate accepts the value of a certificate name instead of certificate content.  
-The proper workflow to create a KMIP server is:  
-
-1. Import a certificate and assign a name for the certificate  
-2. Use a certificate name when creating KMIP server  
-
-However, the Pure Storage FlashArray PowerShell SDK 2.24 does not provide the functionality of importing a certificate (as shown in Step 1).  
-The limitation also applies to the Update-Pfa2Kmip cmdlet when a user wants to update a certificate of a specific KMIP server.  
-
-This cmdlet will be introduced in a future release. The alternative way to realize step 1 is to use the CLI to import the certificate.  
-Certificate configuration is performed through the GUI (Settings > System) and CLI (purecert command).  
-For information about the "purecert" CLI command refer to the "FlashArray CLI Reference Guide" on https://support.purestorage.com/FlashArray/PurityFA/FlashArray_User_Guide.  
-
-The Pure Storage FlashArray PowerShell SDK 2.24 also provides a way to invoke a CLI command.  
-Other KMIP related cmdlets like Get-Pfa2Kmip, Delete-Pfa2Kmip, and Get-Pfa2KmipTest do not have the limitation mentioned above.  
-
-### Disabled Endpoints
-For version 2.24 we disabled the cmdlets corresponding to the some endpoints that caused internal issues.  
-The cmdlets will be enabled on future releases as the internal issues get resolved.  
-Please note these are new endpoints and should not affect backwards compatibility.  
-
-The list of affected endpoints is the following:  
-
-    - '/directories/locks/nlm-reclamations': ['get', 'post'],  
-    - '/directory-services/local/groups/members': ['delete'],  
-    - '/software-patches': ['post']  
-
+None
 
 ## RESOURCES
 PureStorage-Connect GitHub Repository - https://github.com/PureStorage-Connect/PowerShellSDK2  
 PureCode Slack Team - https://codeinvite.purestorage.com/  
 Pure Storage Code Website - https://code.purestorage.com  
 
-## RELEASE 2.24
+## RELEASE CHANGES
 
-Release 2.24 adds more than 30 cmdlets:
-+ Get-Pfa2AlertRule
-+ Get-Pfa2AlertRuleCatalog
-+ Get-Pfa2ArraysPerformanceByLink
-+ Get-Pfa2DirectoryPolicyAutodir
-+ Get-Pfa2DirectoryServiceLocalGroup
-+ Get-Pfa2DirectoryServiceLocalGroupMember
-+ Get-Pfa2DirectoryServiceLocalUser
-+ Get-Pfa2DirectoryServiceLocalUserMember
-+ Get-Pfa2NetworkInterfaceNeighbor
-+ Get-Pfa2PolicyAutodir
-+ Get-Pfa2PolicyAutodirMember
-+ Get-Pfa2SoftwarePatch
-+ Get-Pfa2SoftwarePatchCatalog
-+ New-Pfa2AlertRule
-+ New-Pfa2DirectoryPolicyAutodir
-+ New-Pfa2DirectoryServiceLocalGroup
-+ New-Pfa2DirectoryServiceLocalGroupMember
-+ New-Pfa2DirectoryServiceLocalUser
-+ New-Pfa2DirectoryServiceLocalUserMember
-+ New-Pfa2PolicyAutodir
-+ New-Pfa2PolicyAutodirMember
-+ Remove-Pfa2AlertRule
-+ Remove-Pfa2DirectoryPolicyAutodir
-+ Remove-Pfa2DirectoryServiceLocalGroup
-+ Remove-Pfa2DirectoryServiceLocalUser
-+ Remove-Pfa2DirectoryServiceLocalUserMember
-+ Remove-Pfa2PolicyAutodir
-+ Remove-Pfa2PolicyAutodirMember
-+ Update-Pfa2AlertRule
-+ Update-Pfa2DirectoryServiceLocalGroup
-+ Update-Pfa2DirectoryServiceLocalUser
-+ Update-Pfa2PolicyAutodir
+On this releases we added the following 22 new cmdlet(s):
+	Remove-Pfa2DirectoryServiceLocalGroupMember
+	New-Pfa2DirectoryLockNlmReclamation
+	New-Pfa2Files
+	New-Pfa2ProtectionGroupSnapshotReplica
+	New-Pfa2ProtectionGroupSnapshotTest
+	New-Pfa2RemoteProtectionGroupSnapshotTest
+	New-Pfa2SoftwarePatch
+	Get-Pfa2Subscription
+	Get-Pfa2SubscriptionAsset
+	Get-Pfa2Vchost
+	New-Pfa2Vchost
+	Update-Pfa2Vchost
+	Remove-Pfa2Vchost
+	Get-Pfa2VchostCertificate
+	New-Pfa2VchostCertificate
+	Update-Pfa2VchostCertificate
+	Remove-Pfa2VchostCertificate
+	Get-Pfa2VchostEndpoint
+	New-Pfa2VchostEndpoint
+	Update-Pfa2VchostEndpoint
+	Remove-Pfa2VchostEndpoint
+	New-Pfa2VolumeSnapshotTest
 
+The following 47 cmdlet(s) have new parameters:
+	'Update-Pfa2Array' have the following new parameter(s): [NtpSymmetricKey, EradicationConfigDisabledDelay, EradicationConfigEnabledDelay]
+	'Update-Pfa2ContainerDefaultProtection' have the following new parameter(s): [DefaultProtectionsId]
+	'Get-Pfa2HostGroupProtectionGroup' have the following new parameter(s): [GroupId]
+	'New-Pfa2HostGroupProtectionGroup' have the following new parameter(s): [GroupId]
+	'Remove-Pfa2HostGroupProtectionGroup' have the following new parameter(s): [GroupId]
+	'Get-Pfa2HostProtectionGroup' have the following new parameter(s): [GroupId]
+	'New-Pfa2HostProtectionGroup' have the following new parameter(s): [GroupId]
+	'Remove-Pfa2HostProtectionGroup' have the following new parameter(s): [GroupId]
+	'New-Pfa2Offload' have the following new parameter(s): [AzureProfile, GoogleCloudAuthRegion, GoogleCloudProfile, NfsProfile, AmazonS3AuthRegion, AmazonS3Profile]
+	'Update-Pfa2PolicyNfs' have the following new parameter(s): [NfsVersion]
+	'New-Pfa2PolicyNfsClientRule' have the following new parameter(s): [RulesNfsVersion]
+	'Get-Pfa2ProtectionGroup' have the following new parameter(s): [Id]
+	'New-Pfa2ProtectionGroup' have the following new parameter(s): [SourceId]
+	'Update-Pfa2ProtectionGroup' have the following new parameter(s): [Id]
+	'Remove-Pfa2ProtectionGroup' have the following new parameter(s): [Id]
+	'Get-Pfa2ProtectionGroupHost' have the following new parameter(s): [GroupId]
+	'New-Pfa2ProtectionGroupHost' have the following new parameter(s): [GroupId]
+	'Remove-Pfa2ProtectionGroupHost' have the following new parameter(s): [GroupId]
+	'Get-Pfa2ProtectionGroupHostGroup' have the following new parameter(s): [GroupId]
+	'New-Pfa2ProtectionGroupHostGroup' have the following new parameter(s): [GroupId]
+	'Remove-Pfa2ProtectionGroupHostGroup' have the following new parameter(s): [GroupId]
+	'Get-Pfa2ProtectionGroupPerformanceReplication' have the following new parameter(s): [Id]
+	'Get-Pfa2ProtectionGroupPerformanceReplicationByArray' have the following new parameter(s): [Id]
+	'Get-Pfa2ProtectionGroupSpace' have the following new parameter(s): [Id]
+	'Get-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
+	'New-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
+	'Update-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
+	'Remove-Pfa2ProtectionGroupTarget' have the following new parameter(s): [GroupId]
+	'Get-Pfa2ProtectionGroupVolume' have the following new parameter(s): [GroupId]
+	'New-Pfa2ProtectionGroupVolume' have the following new parameter(s): [GroupId]
+	'Remove-Pfa2ProtectionGroupVolume' have the following new parameter(s): [GroupId]
+	'Get-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [Id, SourceId]
+	'New-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [AllowThrottle, SourceId]
+	'Update-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [Id]
+	'Remove-Pfa2ProtectionGroupSnapshot' have the following new parameter(s): [Id]
+	'Get-Pfa2ProtectionGroupSnapshotTransfer' have the following new parameter(s): [Id, SourceId]
+	'Get-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [Id, SourceId]
+	'New-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [AllowThrottle, SourceId]
+	'Update-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [Id]
+	'Remove-Pfa2RemoteProtectionGroupSnapshot' have the following new parameter(s): [Id]
+	'Get-Pfa2RemoteProtectionGroupSnapshotTransfer' have the following new parameter(s): [Id, SourceId]
+	'New-Pfa2Volume' have the following new parameter(s): [AddToProtectionGroupIds]
+	'Update-Pfa2Volume' have the following new parameter(s): [AddToProtectionGroupIds, RemoveFromProtectionGroupIds]
+	'Get-Pfa2VolumeProtectionGroup' have the following new parameter(s): [GroupId]
+	'New-Pfa2VolumeProtectionGroup' have the following new parameter(s): [GroupId]
+	'Remove-Pfa2VolumeProtectionGroup' have the following new parameter(s): [GroupId]
+	'New-Pfa2VolumeSnapshot' have the following new parameter(s): [AllowThrottle]
+
+The following 1 cmdlet(s) had parameters dropped:
+	'Update-Pfa2SnmpAgent' dropped the following parameter(s): [SnmpAgentName]
 
 ## BACKWARDS COMPATIBILITY
+From 2.24 release:
 Invalid parameters were removed from some cmdlets. Those parameters were not actually being used, or were duplicated, and can simply be dropped.  
 The list of removed parameters include the following:  
 
