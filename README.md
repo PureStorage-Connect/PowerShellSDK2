@@ -24,17 +24,11 @@ Learn about all of the new capabilities that have been added to this latest rele
 <!-- /wp:separator -->
 
 ## :cloud: INSTALLATION
+#### Note: This MSI installer has been deprecated with this release.
 
-There are two ways to install the SDK:
-1. The PowerShell Gallery  
-This is the __recommended__ method for installation. Using this method will pull the latest release from the PowerShell Gallery.  
 ```powershell
 Install-Module -Name PureStoragePowerShellSDK2
 ```
-2. Standalone Windows Installer Package (MSI)
-   #### Note: This installer will be deprecated in a future release
-* [Latest MSI Release](https://github.com/PureStorage-Connect/PowerShellSDK2/releases)
-
 <br>
 <!-- wp:separator -->
 <hr class="wp-block-separator"/>

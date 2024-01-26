@@ -24,7 +24,6 @@ This release requires the following PowerShell versions:
 * Not fully tested.
 
 ## INSTALLATION AND REMOVAL
-The installation can be done using the following methods.
 
 ### POWERSHELL GALLERY
 The Pure Storage FlashArray PowerShell SDK 2.26 can be installed via the PowerShell Gallery by using the Install-Module cmdlet:  
@@ -33,14 +32,12 @@ Install-Module -Name PureStoragePowerShellSDK2
 ```
 See https://www.powershellgallery.com/ for more details on how to discover resources on the PowerShell Gallery.  
 
-### INSTALLER MSI - WILL BE DEPRECATED IN A FUTURE RELEASE
-To install the Pure Storage PowerShell SDK 2.26 via the MSI installer, extract and run PureStoragePowerShellSDK2Installer.msi, and follow the instructions. The Administrator privilege is required to perform the installation.  
-To verify the installation, run `Get-Command -Module PureStoragePowerShellSDK2` in a new PowerShell prompt. The newly installed cmdlets should be listed.  
+### Note: THE INSTALLER MSI HAS BEEN DEPRECATED WITH THIS RELEASE
 
-To remove the Pure Storage PowerShell SDK 2 module, perform the following based on the installation method used.  
-Installed via the PowerShell Gallery: Use the `Remove-Module -Name PureStoragePowerShellSDK2` command.  
-Installed via the MSI: The Pure Storage PowerShell SDK 2.26 MSI can be uninstalled from "Programs and Features" of the Control Panel.  
-
+To remove the Pure Storage PowerShell SDK 2 module, perform the following.  
+```
+Remove-Module -Name PureStoragePowerShellSDK2
+```  
 
 ## CMDLET HELP
 Download the detailed help using the command `Update-Help -Module PureStoragePowerShellSDK2`.  
