@@ -1,4 +1,4 @@
-# Pure Storage PowerShell SDK for FlashArray 2.26.63 Release Notes
+# Pure Storage PowerShell SDK for FlashArray 2.26.70 Release Notes
 
 The Pure Storage PowerShell SDK for FlashArray provides integration with the Purity Operating Environment and the FlashArray.  
 It provides the functionalities of Purity's REST API as PowerShell cmdlets.  
@@ -26,7 +26,7 @@ This release requires the following PowerShell versions:
 ## INSTALLATION AND REMOVAL
 
 ### POWERSHELL GALLERY
-The Pure Storage FlashArray PowerShell SDK 2.26 can be installed via the PowerShell Gallery by using the Install-Module cmdlet:  
+The Pure Storage FlashArray PowerShell SDK version 2 can be installed via the PowerShell Gallery by using the Install-Module cmdlet:  
 ```
 Install-Module -Name PureStoragePowerShellSDK2
 ```
@@ -54,7 +54,9 @@ Pure Storage Code Website - https://code.purestorage.com
 
 ## RELEASE CHANGES
 
-On this releases we added the following 22 new cmdlet(s):
+### Version 2.26.70 is a maintenance release that removes an unecessary file from the distribution. No other changes were made between versions 2.26.63 and 2.26.70.
+
+Version 2.26.63 adds the following 22 new cmdlet(s):
 -	Remove-Pfa2DirectoryServiceLocalGroupMember
 -	New-Pfa2DirectoryLockNlmReclamation
 -	New-Pfa2Files
