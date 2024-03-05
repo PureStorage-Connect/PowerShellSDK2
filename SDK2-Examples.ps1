@@ -31,10 +31,10 @@ Get-Command -Module PureStoragePowerShellSDK2
 Update-Help -Module PureStoragePowerShellSDK2
 
 # All the variations of Help available for cmdlets
-Get-Help New-Pfa2Array
-Get-Help New-Pfa2Array -Full
-Get-Help New-Pfa2Array -Detailed
-Get-Help New-Pfa2Array -Examples
+Get-Help Connect-Pfa2Array
+Get-Help Connect-Pfa2Array -Full
+Get-Help Connect-Pfa2Array -Detailed
+Get-Help Connect-Pfa2Array -Examples
 
 ## Array Authentication
 #######################
