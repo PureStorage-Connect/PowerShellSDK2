@@ -24,7 +24,7 @@ Learn about all of the new capabilities that have been added to this latest rele
 <!-- /wp:separator -->
 
 ## :cloud: INSTALLATION
-#### Note: This MSI installer has been deprecated with this release.
+#### Note: This MSI installer has been deprecated.
 
 ```powershell
 Install-Module -Name PureStoragePowerShellSDK2
@@ -37,7 +37,6 @@ Install-Module -Name PureStoragePowerShellSDK2
 ### :arrow_down: RESOURCES
 :radio_button: [Pure Storage Support -- Programming Interfaces > PowerShell](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)<br>
 :radio_button: [Quick Start PowerShell SDK 2 Examples](https://github.com/PureStorage-Connect/PowerShellSDK2/blob/master/SDK2-Examples.ps1)<br>
-:radio_button: [Downloadable SDK v2 HTML Help file](http://htmlpreview.github.io/?https://github.com/PureStorage-Connect/PowerShellSDK2/blob/main/PureStoragePowerShellSDK2-Help.html)<br>
 :radio_button: [SDK version 1.x Github Repository](https://www.github.com/PureStorage-Connect/PowerShellSDK)
 <br>
 <!-- wp:separator -->
