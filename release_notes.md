@@ -64,7 +64,7 @@ To find what about topics are available: `Get-Help -Name About_Pfa2*`
 ## Few endpoints got new parameters.
 Find detailed information about the cmdlets in the sections below.
 
-# The following 33 cmdlet(s) have new parameters:
+# The following 6 cmdlet(s) have new parameters:
 - 'Remove-Pfa2DirectoryPolicyNfs' have the following new parameter(s):
     - ServerId
     - ServerName
@@ -91,3 +91,4 @@ No performance testing was done for this release.
 ## OPEN SOURCE LICENSES
 
 Please review licenses.txt
+
