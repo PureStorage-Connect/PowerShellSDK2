@@ -1,6 +1,6 @@
-# Pure Storage PowerShell SDK for FlashArray 2.45.148 Release Notes
+# Pure Storage PowerShell SDK for FlashArray 2.46.159 Release Notes
 
-GA Release: 19/19/2025
+GA Release: 4/12/2025
 
 The Pure Storage PowerShell SDK for FlashArray provides integration with the Purity Operating Environment and the FlashArray.
 It provides the functionalities of Purity's REST API as PowerShell cmdlets.
@@ -8,7 +8,7 @@ It provides the functionalities of Purity's REST API as PowerShell cmdlets.
 ## RELEASE REQUIREMENTS AND COMPATIBILITY
 
 This release requires at least .NET Core 2.1 (https://dotnet.microsoft.com/download/dotnet-core/2.1/).
-This release is compatible with Purity FlashArrays that support Pure Storage REST API 2.0 to 2.45 inclusive.
+This release is compatible with Purity FlashArrays that support Pure Storage REST API 2.0 to 2.46 inclusive.
 This release is also compatible to be installed side by side with Pure Storage PowerShell SDK 1.x.
 This release requires a 64-bit operating system.
 This release requires the following PowerShell minimum versions:
@@ -61,28 +61,18 @@ Download the detailed help using the command `Update-Help -Module PureStoragePow
 Get help using `Get-Help -Name Get-Pfa2Volume` for cmdlet Get-Pfa2Volume.
 To find what about topics are available: `Get-Help -Name About_Pfa2*`
 
-## Few endpoints got new parameters.
+## In this release we introduce miron changes and bugfixes. Few endpoints got new optional property in response.
 Find detailed information about the cmdlets in the sections below.
 
-# The following 6 cmdlet(s) have new parameters:
-- 'Remove-Pfa2DirectoryPolicyNfs' have the following new parameter(s):
-    - ServerId
-    - ServerName
-- 'Remove-Pfa2DirectoryPolicySmb' have the following new parameter(s):
-    - ServerId
-    - ServerName
-- 'Remove-Pfa2DirectoryExport' have the following new parameter(s):
-    - ServerId
-    - ServerName
-- 'Update-Pfa2DirectoryExport' have the following new parameter(s):
-    - ServerId
-    - ServerName
-- 'Remove-Pfa2PolicyNfsMember' have the following new parameter(s):
-    - ServerId
-    - ServerName
-- 'Remove-Pfa2PolicySmbMember' have the following new parameter(s):
-    - ServerId
-    - ServerName
+## The following 8 cmdlet(s) have new optional property 'Server' in the response with the '200' status
+- Get-Pfa2DirectoryPolicyNfs
+- New-Pfa2DirectoryPolicyNfs 
+- Get-Pfa2DirectoryPolicySmb 
+- New-Pfa2DirectoryPolicySmb
+- Get-Pfa2PolicyNfsMember 
+- New-Pfa2PolicyNfsMember 
+- Get-Pfa2PolicySmbMember 
+- New-Pfa2PolicySmbMember
 
 ## PERFORMANCE TESTING
 
@@ -91,4 +81,5 @@ No performance testing was done for this release.
 ## OPEN SOURCE LICENSES
 
 Please review licenses.txt
+
 
