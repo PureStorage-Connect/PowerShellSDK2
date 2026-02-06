@@ -1,6 +1,6 @@
-# Pure Storage PowerShell SDK for FlashArray 2.46.159 Release Notes
+# Pure Storage PowerShell SDK for FlashArray 2.47.190 Release Notes
 
-GA Release: 4/12/2025
+GA Release: 6/2/2026
 
 The Pure Storage PowerShell SDK for FlashArray provides integration with the Purity Operating Environment and the FlashArray.
 It provides the functionalities of Purity's REST API as PowerShell cmdlets.
@@ -8,7 +8,7 @@ It provides the functionalities of Purity's REST API as PowerShell cmdlets.
 ## RELEASE REQUIREMENTS AND COMPATIBILITY
 
 This release requires at least .NET Core 2.1 (https://dotnet.microsoft.com/download/dotnet-core/2.1/).
-This release is compatible with Purity FlashArrays that support Pure Storage REST API 2.0 to 2.46 inclusive.
+This release is compatible with Purity FlashArrays that support Pure Storage REST API 2.0 to 2.47 inclusive.
 This release is also compatible to be installed side by side with Pure Storage PowerShell SDK 1.x.
 This release requires a 64-bit operating system.
 This release requires the following PowerShell minimum versions:
@@ -64,15 +64,32 @@ To find what about topics are available: `Get-Help -Name About_Pfa2*`
 ## In this release we introduce miron changes and bugfixes. Few endpoints got new optional property in response.
 Find detailed information about the cmdlets in the sections below.
 
-## The following 8 cmdlet(s) have new optional property 'Server' in the response with the '200' status
-- Get-Pfa2DirectoryPolicyNfs
-- New-Pfa2DirectoryPolicyNfs 
-- Get-Pfa2DirectoryPolicySmb 
-- New-Pfa2DirectoryPolicySmb
-- Get-Pfa2PolicyNfsMember 
-- New-Pfa2PolicyNfsMember 
-- Get-Pfa2PolicySmbMember 
-- New-Pfa2PolicySmbMember
+## The following 7 cmdlet(s) have new parameters:
+- 'New-Pfa2Login' have the following new parameter(s): 
+	- Username
+    - Password
+- 'Update-Pfa2ProtectionGroup' have the following new parameter(s): 
+	- SourceRetentionPerPeriod
+	- SourceRetentionPeriodLengthMs
+	- TargetRetentionPerPeriod
+	- TargetRetentionPeriodLengthMs
+- 'New-Pfa2Realm' have the following new parameter(s): 
+	- QosBandwidthFloor
+	- QosIopsFloor
+- 'Update-Pfa2Realm' have the following new parameter(s): 
+	- QosBandwidthFloor
+	- QosIopsFloor
+- 'Update-Pfa2RemoteProtectionGroup' have the following new parameter(s): 
+	- TargetRetentionPerPeriod
+	- TargetRetentionPeriodLengthMs
+- 'Update-Pfa2Support' have the following new parameter(s): 
+	- PhonehomeExcludes
+- 'New-Pfa2WorkloadPlacementRecommendation' have the following new parameter(s): 
+	- RecommendationEngine
+	- ResultsPlacementsTargetsCapacityUsedProjectionsProjectionBaselineEnd
+	- ResultsPlacementsTargetsCapacityUsedProjectionsProjectionBaselineStart
+	- ResultsPlacementsTargetsLoadProjectionsProjectionBaselineEnd
+	- ResultsPlacementsTargetsLoadProjectionsProjectionBaselineStart
 
 ## PERFORMANCE TESTING
 
