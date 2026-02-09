@@ -1,0 +1,63 @@
+TOPIC
+    about_Pfa2SafeMode
+
+SHORT DESCRIPTION
+    Describes how the Pure Storage PowerShell SDK2 cmdlets supports SafeMode
+
+LONG DESCRIPTION
+    The Pure Storage PowerShell SDK2 following SafeMode variations:
+
+    ARRAY-WIDE SAFEMODE
+        You can get Array-Wide SafeMode status using Get-Pfa2Array
+            - Manual eradication status applied on the array level
+            - The status is reflected by property `EradicationConfig`. Values include `all-disabled` and `all-enabled`
+        You cannot disable/enable array-wide SafeMode using the SDK. Please contact Pure Storage Technical Services if there is need.
+
+    GLOBAL VOLUME PROTECTION (GVP)
+        You cannot get status or enable/disable GVP using the SDK with this release. Please contact Pure Storage Technical Services if there is need.
+        Once the default protection group is setup, all of volumes (including existing ones) created by New-Pfa2Volume will be protected by the protection group automatically. You don't need to specify any parameter.
+
+    OBJECT-LEVEL SAFEMODE
+        You can get Object-Level SafeMode status per protection group using Get-Pfa2ProtectionGroup
+            - Manual eradication status applied on the protection group level
+            - The status is reflected by property EradicationConfig. Values include `disabled` and `enabled`
+        You can enable Object-Level SafeMode per protection group using Update-Pfa2ProtectionGroup
+            - Use retention_lock parameter. The value could be `ratcheted` or `unlocked`
+        You cannot disable Object-Level SafeMode per protection group with the SDK. Please contact Pure Storage Technical Services if there is need.
+
+    DEFAULT PROTECTION FOR VOLUMES
+        Default protection for volumes is available with arrays running Purity 6.3.4 and higher.
+        With Purity 6.3.4, default protection for volumes is an opt-in feature and is configured by creating a default protection group list with `PATCH /api/2.16/container-default-protections Update-Pfa2ContainerDefaultProtections`. With Purity 6.3.5, default protection for volumes is automatically enabled, a default protection group name `pgroup-auto` is automatically created, and the default protection group list is initially set to `pgroup-auto`.
+        When enabled, new pods inherit the default protection group list for the root of the array. Any volumes newly created by New-Pfa2Volume are automatically put into each protection group named in the applicable default protection group list for either the  pod or the root of the array. Default protection for volumes does not affect existing volumes. 
+
+        Notes:
+            - Currently, when default protection for volumes or other SafeMode features are enabled, a volume in a protection group cannot be moved out of the protection group. Contact Pure Storage Technical Services for assistance.
+            - For SDK equal or under 2.15, and Purity 6.3.5 or higher, the SDK does not support a way to avoid putting volumes into the default protection groups.
+        
+    DISABLED ERADICATION UNDER SAFEMODE
+        Under SafeMode, if you try to eradicate objects protected using the SDK, you receive PowerShell error stating `Eradication is disabled.`
+
+EXAMPLES
+    Example 1: Get Array-Wide SafeMode status
+        (Get-Pfa2Array).EradicationConfig
+
+    Example 2: Get Object-Level SafeMode status of a protection group. Please note either Array-Wide or Object-Level SafeMode is on, the status would be "enabled"
+        (Get-Pfa2ProtectionGroup -Name "testpg").EradicationConfig
+
+    Example 3: Enable Object-Level SafeMode status
+        Update-Pfa2ProtectionGroup -Name "testpg" -RetentionLock "ratcheted"
+
+    Example 4: If Auto-On SafeMode is on, create volume and put the volume in the default protection group
+        New-Pfa2Volume -Name "testpg" -Provisioned 10gb
+
+SEE ALSO
+
+    See the following links for more SafeMode information
+
+    Array-Wide SafeMode "https://support.purestorage.com/FlashArray/FlashArray_Security/SafeMode/FlashArray_SafeMode_FAQ"
+
+    Global Volume Protection "https://support.purestorage.com/FlashArray/FlashArray_Security/SafeMode/SafeMode_Global_Volume_Protection"
+
+    Auto-On SafeMode "https://support.purestorage.com/FlashArray/FlashArray_Security/SafeMode/FlashArray_Auto-On_SafeMode_FAQ"
+
+    Object-level SafeMode "https://support.purestorage.com/FlashArray/FlashArray_Security/SafeMode/FlashArray_Object-level_SafeMode_FAQ"
