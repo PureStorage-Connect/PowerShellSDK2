@@ -1,0 +1,222 @@
+---
+external help file: PureStoragePowerShellSDK2.dll-Help.xml
+Module Name: PureStoragePowerShellSDK2
+online version:
+schema: 2.0.0
+---
+
+# Update-Pfa2ProtectionGroupSnapshot
+
+## SYNOPSIS
+
+(REST API 2.1+) Modify a protection group snapshot
+
+## SYNTAX
+
+```
+Update-Pfa2ProtectionGroupSnapshot [-Array <Rest2Api>] [-XRequestID <String>]
+ [-ContextName <List[String]>]
+ [-Id <List[String]>] [-Name <String>]
+ [-ProtectionGroupSnapshotName <String>] [-Destroyed <Boolean>] [-Suffix <String>] [-ApiVersion <String>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Modifies a protection group snapshot so that it can be destroyed. To destroy a volume, set `Destroyed=$True`. To recover a volume that has been destroyed and is pending eradication, set `Destroyed=$False`. The `Name` or `Id` parameter is required, but they cannot be set together.
+
+## EXAMPLES
+
+### Example 1
+```powershell
+Update-Pfa2ProtectionGroupSnapshot -Array $FlashArray -Name $SnapshotName -Destroyed $true
+```
+
+Destroy a protection group snapshot named $SnapshotName.
+
+### Example 2
+```powershell
+Update-Pfa2ProtectionGroupSnapshot -Array $FlashArray -Name $DefaultSnapshotName -ProtectionGroupSnapshotName $NewSnapshotName
+```
+
+Update a protection group snapshot name to $NewSnapshotName from $DefaultSnapshotName.
+
+### Example 3
+```powershell
+Update-Pfa2ProtectionGroupSnapshot -Array $FlashArray -Name 'db-daily-pg.hourly' -Suffix 'daily'
+```
+
+Sets -Suffix on the protection group snapshot named 'db-daily-pg.hourly'.
+
+## PARAMETERS
+
+### -ApiVersion
+
+alternative API version
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Array
+
+The PureArray object representing a connection to a Pure Storage FlashArray. Created using the `Connect-Pfa2Array` cmdlet.
+
+```yaml
+Type: Rest2Api
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContextName
+
+Performs the operation on the context specified. If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided `context`.
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases: ContextNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Destroyed
+
+Returns a value of `$True` if the protection group snapshot has been destroyed and is pending eradication. The `TimeRemaining` value displays the amount of time left until the destroyed snapshot is permanently eradicated. Before the `TimeRemaining` period has elapsed, the destroyed snapshot can be recovered by setting `Destroyed=$False`. Once the `TimeRemaining` period has elapsed, the snapshot is permanently eradicated and can no longer be recovered.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+
+Performs the operation on the unique resource IDs specified. Enter multiple resource IDs. The `Id` or `Name` parameter is required, but they cannot be set together.
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases: Ids
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+
+Performs the operation on the unique name specified.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -ProtectionGroupSnapshotName
+
+A user-specified name. The name must be locally unique and can be changed.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Suffix
+
+(REST API 2.3+) The name suffix appended to the protection group name to make up the full protection group snapshot name in the form `PGROUP.SUFFIX`. If `Suffix` is not specified, the protection group name is in the form `PGROUP.NNN`, where `NNN` is a unique monotonically increasing number. If multiple protection group snapshots are created at a time, the suffix name is appended to those snapshots.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XRequestID
+
+(REST API 2.3+) Supplied by client during request or generated by server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### String
+
+## OUTPUTS
+
+### Object
+
+## NOTES
+
+The `Array` parameter is optional once `Connect-Pfa2Array` has run in the current session, because the connection is cached. For global SDK options run `Help about_Pfa2Configuration`, and for the `Filter` syntax run `Help about_Pfa2Filtering`.
+
+## RELATED LINKS
+
+[Pure Storage PowerShell SDK 2 on GitHub](https://github.com/PureStorage-Connect/PowerShellSDK2)
+
+[Pure Storage Windows PowerShell guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)
+
+[Get-Pfa2ProtectionGroupSnapshot](Get-Pfa2ProtectionGroupSnapshot.md)
+
+[New-Pfa2ProtectionGroupSnapshot](New-Pfa2ProtectionGroupSnapshot.md)
+
+[Remove-Pfa2ProtectionGroupSnapshot](Remove-Pfa2ProtectionGroupSnapshot.md)

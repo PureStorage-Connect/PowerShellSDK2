@@ -1,0 +1,294 @@
+---
+external help file: PureStoragePowerShellSDK2.dll-Help.xml
+Module Name: PureStoragePowerShellSDK2
+online version:
+schema: 2.0.0
+---
+
+# Update-Pfa2Admin
+
+## SYNOPSIS
+
+(REST API 2.2+) Modify an administrator
+
+## SYNTAX
+
+```
+Update-Pfa2Admin [-Array <Rest2Api>] [-XRequestID <String>] [-Name <String>] [-AuthorizationModel <String>]
+ [-Locked <Boolean>] [-Password <SecureString>] [-PublicKey <String>] [-OldPassword <SecureString>]
+ [-ManagementAccessPoliciesId <List[String]>]
+ [-ManagementAccessPoliciesName <List[String]>]
+ [-ManagementAccessPoliciesResourceType <List[String]>]
+ [-RoleName <String>] [-ApiVersion <String>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Modifies properties for the specified administrator.
+
+## EXAMPLES
+
+### Example 1
+```powershell
+Update-Pfa2Admin -Array $FlashArray -Name 'jsmith' -AuthorizationModel 'jsmith'
+```
+
+Sets -AuthorizationModel on the array administrator named 'jsmith'.
+
+### Example 2
+```powershell
+Update-Pfa2Admin -Array $FlashArray -Name 'jsmith' -Locked $true
+```
+
+Sets -Locked on the array administrator named 'jsmith'.
+
+### Example 3
+```powershell
+Update-Pfa2Admin -Array $FlashArray -Name 'jsmith' -Password $SecurePassword
+```
+
+Sets -Password on the array administrator named 'jsmith'.
+
+## PARAMETERS
+
+### -ApiVersion
+
+alternative API version
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Array
+
+The PureArray object representing a connection to a Pure Storage FlashArray. Created using the `Connect-Pfa2Array` cmdlet.
+
+```yaml
+Type: Rest2Api
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthorizationModel
+
+The authorization model the object store uses when evaluating access to buckets and objects.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Locked
+
+Returns a value of `$True` if the user is currently locked out. otherwise `$False`. Change to `$False` to unlock a user. This field is only visible to `array_admin` roles. For all other users, the value is always `null`.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementAccessPoliciesId
+
+A globally unique, system-generated ID. The ID cannot be modified.
+
+reference: ReferenceWithType
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementAccessPoliciesName
+
+The resource name, such as volume name, pod name, snapshot name, and so on.
+
+reference: ReferenceWithType
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementAccessPoliciesResourceType
+
+Type of the object (full name of the endpoint). Valid values are `hosts`, `host-groups`, `network-interfaces`, `pods`, `ports`, `pod-replica-links`, `subnets`, `volumes`, `volume-snapshots`, `volume-groups`, `directories`, `policies/nfs`, `policies/smb`, and `policies/snapshot`, etc.
+
+reference: ReferenceWithType
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+
+Performs the operation on the unique name specified.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -OldPassword
+
+The current password.
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Password
+
+Password associated with the account.
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicKey
+
+Public key for SSH access. Multiple public keys can be specified, separated by newlines.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoleName
+
+This field has been deprecated. Predecessor to management access policies.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: RoleNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XRequestID
+
+(REST API 2.3+) Supplied by client during request or generated by server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### String
+
+## OUTPUTS
+
+### Object
+
+## NOTES
+
+The `Array` parameter is optional once `Connect-Pfa2Array` has run in the current session, because the connection is cached. For global SDK options run `Help about_Pfa2Configuration`, and for the `Filter` syntax run `Help about_Pfa2Filtering`.
+
+## RELATED LINKS
+
+[Pure Storage PowerShell SDK 2 on GitHub](https://github.com/PureStorage-Connect/PowerShellSDK2)
+
+[Pure Storage Windows PowerShell guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)
+
+[Get-Pfa2Admin](Get-Pfa2Admin.md)
+
+[New-Pfa2Admin](New-Pfa2Admin.md)
+
+[Remove-Pfa2Admin](Remove-Pfa2Admin.md)

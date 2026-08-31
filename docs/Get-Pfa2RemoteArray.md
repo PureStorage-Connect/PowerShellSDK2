@@ -1,0 +1,238 @@
+---
+external help file: PureStoragePowerShellSDK2.dll-Help.xml
+Module Name: PureStoragePowerShellSDK2
+online version:
+schema: 2.0.0
+---
+
+# Get-Pfa2RemoteArray
+
+## SYNOPSIS
+
+List remote arrays
+
+## SYNTAX
+
+```
+Get-Pfa2RemoteArray [-Array <Rest2Api>] [-XRequestID <String>] [-CurrentFleetOnly <Boolean>] [-Filter <String>]
+ [-Id <List[String]>] [-Limit <Int32>] [-Name <String>] [-Offset <Int32>]
+ [-Sort <List[String]>] [-ApiVersion <String>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Dispalys arrays in the current fleet, as well as arrays that the current array has existing replication connections to.
+
+## EXAMPLES
+
+### Example 1
+```powershell
+Get-Pfa2RemoteArray -Array $FlashArray
+```
+
+Lists all remote arrays on the array.
+
+### Example 2
+```powershell
+Get-Pfa2RemoteArray -Array $FlashArray -Name 'array2'
+```
+
+Returns the remote array named 'array2'.
+
+### Example 3
+```powershell
+Get-Pfa2RemoteArray -Array $FlashArray -Filter "name='array2*'"
+```
+
+Returns only the remote arrays matching a server-side filter expression. For the filter syntax, run `Help about_Pfa2Filtering`.
+
+### Example 4
+```powershell
+Get-Pfa2RemoteArray -Array $FlashArray -Limit 25 -Sort 'name-'
+```
+
+Returns the first 25 remote arrays sorted by name in descending order. Append `-` to a field name to reverse the sort.
+
+## PARAMETERS
+
+### -ApiVersion
+
+alternative API version
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Array
+
+The PureArray object representing a connection to a Pure Storage FlashArray. Created using the `Connect-Pfa2Array` cmdlet.
+
+```yaml
+Type: Rest2Api
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CurrentFleetOnly
+
+If current_fleet_only is specified, then results will only show arrays from the same fleet to which the current array is a member of.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+
+Narrows down the results to only the response objects that satisfy the filter criteria. For more information of filtering, run `Help About_Pfa2Filtering`
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+
+Performs the operation on the unique resource IDs specified. Enter multiple resource IDs. The `Id` or `Name` parameter is required, but they cannot be set together.
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases: Ids
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Limit
+
+Limits the size of the response to the specified number of objects on each page. To return the total number of resources, set `Limit=0`. The total number of resources is returned as a `TotalItemCount` value. If the page size requested is larger than the system maximum limit, the server returns the maximum limit, disregarding the requested page size.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+
+Performs the operation on the unique name specified.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Offset
+
+The starting position based on the results of the query in relation to the full set of response objects returned.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Sort
+
+Returns the response objects in the order specified. Set `Sort` to the name in the response by which to sort. Sorting can be performed on any of the names in the response, and the objects can be sorted in ascending or descending order. By default, the response objects are sorted in ascending order. To sort in descending order, append the minus sign (`-`) to the name. A single request can be sorted on multiple objects. For example, you can sort all volumes from largest to smallest volume size, and then sort volumes of the same size in ascending order by volume name. To sort on multiple names, list the names.
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XRequestID
+
+(REST API 2.3+) Supplied by client during request or generated by server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### String
+
+## OUTPUTS
+
+### Object
+
+## NOTES
+
+The `Array` parameter is optional once `Connect-Pfa2Array` has run in the current session, because the connection is cached. For global SDK options run `Help about_Pfa2Configuration`, and for the `Filter` syntax run `Help about_Pfa2Filtering`.
+
+## RELATED LINKS
+
+[Pure Storage PowerShell SDK 2 on GitHub](https://github.com/PureStorage-Connect/PowerShellSDK2)
+
+[Pure Storage Windows PowerShell guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)

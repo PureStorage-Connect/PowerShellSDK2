@@ -1,0 +1,303 @@
+---
+external help file: PureStoragePowerShellSDK2.dll-Help.xml
+Module Name: PureStoragePowerShellSDK2
+online version:
+schema: 2.0.0
+---
+
+# Update-Pfa2SnmpManager
+
+## SYNOPSIS
+
+(REST API 2.4+) Modify SNMP manager
+
+## SYNTAX
+
+```
+Update-Pfa2SnmpManager [-Array <Rest2Api>] [-XRequestID <String>] [-Name <String>] [-SnmpManagerName <String>]
+ [-Host <String>] [-Notification <String>] [-Version <String>] [-V2cCommunity <String>]
+ [-V3AuthPassphrase <String>] [-V3AuthProtocol <String>] [-V3PrivacyPassphrase <String>]
+ [-V3PrivacyProtocol <String>] [-V3User <String>] [-ApiVersion <String>]
+ [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Modifies the name or the protocol attributes of the specified SNMP manager.
+
+## EXAMPLES
+
+### Example 1
+```powershell
+Update-Pfa2SnmpManager -Array $FlashArray -Name 'snmp-mgr-01' -SnmpManagerName 'snmp-mgr-01-renamed'
+```
+
+Renames the SNMP manager 'snmp-mgr-01' to 'snmp-mgr-01-renamed'.
+
+### Example 2
+```powershell
+Update-Pfa2SnmpManager -Array $FlashArray -Name 'snmp-mgr-01' -Host 'snmp-mgr-01'
+```
+
+Sets -Host on the SNMP manager named 'snmp-mgr-01'.
+
+### Example 3
+```powershell
+Update-Pfa2SnmpManager -Array $FlashArray -Name 'snmp-mgr-01' -Notification 'snmp-mgr-01'
+```
+
+Sets -Notification on the SNMP manager named 'snmp-mgr-01'.
+
+## PARAMETERS
+
+### -ApiVersion
+
+alternative API version
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Array
+
+The PureArray object representing a connection to a Pure Storage FlashArray. Created using the `Connect-Pfa2Array` cmdlet.
+
+```yaml
+Type: Rest2Api
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Host
+
+DNS hostname or IP address of a computer that hosts an SNMP manager to which Purity//FA is to send trap messages when it generates alerts.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+
+Performs the operation on the unique name specified.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Notification
+
+The type of notification the agent will send. Valid values are `inform` and `trap`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SnmpManagerName
+
+A user-specified name. The name must be locally unique and can be changed.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -V2cCommunity
+
+The v2c configurations of SNMP.  The v2c configurations of SNMP.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -V3AuthPassphrase
+
+The v3 configurations of SNMP.  The v3 configurations of SNMP.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -V3AuthProtocol
+
+The v3 configurations of SNMP.  The v3 configurations of SNMP.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -V3PrivacyPassphrase
+
+The v3 configurations of SNMP.  The v3 configurations of SNMP.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -V3PrivacyProtocol
+
+The v3 configurations of SNMP.  The v3 configurations of SNMP.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -V3User
+
+The v3 configurations of SNMP.  The v3 configurations of SNMP.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Version
+
+Version of the SNMP protocol to be used by Purity//FA to communicate with the specified manager. Valid values are `v2c` and `v3`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Versions
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XRequestID
+
+(REST API 2.3+) Supplied by client during request or generated by server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### String
+
+## OUTPUTS
+
+### Object
+
+## NOTES
+
+The `Array` parameter is optional once `Connect-Pfa2Array` has run in the current session, because the connection is cached. For global SDK options run `Help about_Pfa2Configuration`, and for the `Filter` syntax run `Help about_Pfa2Filtering`.
+
+## RELATED LINKS
+
+[Pure Storage PowerShell SDK 2 on GitHub](https://github.com/PureStorage-Connect/PowerShellSDK2)
+
+[Pure Storage Windows PowerShell guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)
+
+[Get-Pfa2SnmpManager](Get-Pfa2SnmpManager.md)
+
+[New-Pfa2SnmpManager](New-Pfa2SnmpManager.md)
+
+[Remove-Pfa2SnmpManager](Remove-Pfa2SnmpManager.md)

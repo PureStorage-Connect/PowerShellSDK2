@@ -1,0 +1,255 @@
+---
+external help file: PureStoragePowerShellSDK2.dll-Help.xml
+Module Name: PureStoragePowerShellSDK2
+online version:
+schema: 2.0.0
+---
+
+# New-Pfa2DirectoryServiceRole
+
+## SYNOPSIS
+
+Create a group in management access policy mappings
+
+## SYNTAX
+
+```
+New-Pfa2DirectoryServiceRole [-Array <Rest2Api>] [-XRequestID <String>]
+ [-ContextName <List[String]>] -Name <String> [-Group <String>]
+ [-GroupBase <String>] [-ManagementAccessPoliciesId <List[String]>]
+ [-ManagementAccessPoliciesName <List[String]>]
+ [-ManagementAccessPoliciesResourceType <List[String]>]
+ [-RoleName <String>] [-ApiVersion <String>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Creates one or more groups in management access policy mappings.
+
+## EXAMPLES
+
+### Example 1
+```powershell
+New-Pfa2DirectoryServiceRole -Array $FlashArray -Name 'array_admin'
+```
+
+Creates a directory service role mapping with only the required parameters supplied.
+
+### Example 2
+```powershell
+New-Pfa2DirectoryServiceRole -Array $FlashArray -Name 'array_admin' -Group 'array_admin' -GroupBase 'array_admin'
+```
+
+Creates a directory service role mapping and sets -Group and -GroupBase in the same call.
+
+## PARAMETERS
+
+### -ApiVersion
+
+alternative API version
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Array
+
+The PureArray object representing a connection to a Pure Storage FlashArray. Created using the `Connect-Pfa2Array` cmdlet.
+
+```yaml
+Type: Rest2Api
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContextName
+
+Performs the operation on the context specified. If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided `context`.
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases: ContextNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+
+Group name that contains users with the abilities granted by the associated policies.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupBase
+
+Specifies where the configured group is located in the directory tree.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementAccessPoliciesId
+
+A globally unique, system-generated ID. The ID cannot be modified.
+
+reference: ReferenceWithType
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementAccessPoliciesName
+
+The resource name, such as volume name, pod name, snapshot name, and so on.
+
+reference: ReferenceWithType
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementAccessPoliciesResourceType
+
+Type of the object (full name of the endpoint). Valid values are `hosts`, `host-groups`, `network-interfaces`, `pods`, `ports`, `pod-replica-links`, `subnets`, `volumes`, `volume-snapshots`, `volume-groups`, `directories`, `policies/nfs`, `policies/smb`, and `policies/snapshot`, etc.
+
+reference: ReferenceWithType
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+
+Performs the operation on the unique names specified. For example, `GroupRoleMappingName`. Enter multiple names.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -RoleName
+
+This field has been deprecated. Predecessor to management access policies. Can be set to the premade policy of the same name. Cannot be set with management_access_policies.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: RoleNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XRequestID
+
+(REST API 2.3+) Supplied by client during request or generated by server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### String
+
+## OUTPUTS
+
+### Object
+
+## NOTES
+
+The `Array` parameter is optional once `Connect-Pfa2Array` has run in the current session, because the connection is cached. For global SDK options run `Help about_Pfa2Configuration`, and for the `Filter` syntax run `Help about_Pfa2Filtering`.
+
+## RELATED LINKS
+
+[Pure Storage PowerShell SDK 2 on GitHub](https://github.com/PureStorage-Connect/PowerShellSDK2)
+
+[Pure Storage Windows PowerShell guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)
+
+[Get-Pfa2DirectoryServiceRole](Get-Pfa2DirectoryServiceRole.md)
+
+[Remove-Pfa2DirectoryServiceRole](Remove-Pfa2DirectoryServiceRole.md)
+
+[Update-Pfa2DirectoryServiceRole](Update-Pfa2DirectoryServiceRole.md)

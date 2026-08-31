@@ -1,0 +1,231 @@
+---
+external help file: PureStoragePowerShellSDK2.dll-Help.xml
+Module Name: PureStoragePowerShellSDK2
+online version:
+schema: 2.0.0
+---
+
+# Update-Pfa2ProtectionGroupTarget
+
+## SYNOPSIS
+
+(REST API 2.1+) Modify a protection group target
+
+## SYNTAX
+
+```
+Update-Pfa2ProtectionGroupTarget [-Array <Rest2Api>] [-XRequestID <String>]
+ [-ContextName <List[String]>]
+ [-GroupId <List[String]>]
+ [-GroupName <List[String]>]
+ [-MemberId <List[String]>]
+ [-MemberName <List[String]>] [-Allowed <Boolean>] [-ApiVersion <String>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Modifies the source array to replicate protection group data to the target, or disallows the source array from replicating protection group data to the target. The `Allowed` parameter must be set from the target array. The `GroupName` parameter represents the name of the protection group. The `Allowed` and `GroupName` parameters are required and must be set together. Offload targets do not support the `Allowed` parameter.
+
+## EXAMPLES
+
+### Example 1
+```powershell
+# Update-Pfa2ProtectionGroupTarget -Array $FlashArray -GroupName $RemotePGName -MemberName "nfstarget" -Allowed $false
+```
+
+Disallowing a target in a protection group is not supported for offload targets.
+
+### Example 2
+```powershell
+Update-Pfa2ProtectionGroupTarget -Array $FlashArray -GroupName 'group-01'
+```
+
+Sets -GroupName on the protection group replication target.
+
+### Example 3
+```powershell
+Update-Pfa2ProtectionGroupTarget -Array $FlashArray -MemberName 'member-01'
+```
+
+Sets -MemberName on the protection group replication target.
+
+### Example 4
+```powershell
+Update-Pfa2ProtectionGroupTarget -Array $FlashArray -Allowed $true
+```
+
+Sets -Allowed on the protection group replication target.
+
+## PARAMETERS
+
+### -Allowed
+
+If set to `$True`, the target array has allowed the source array to replicate protection group data to the target array. If set to `$False`, the target array has not allowed the source array to replicate protection group data to the target.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApiVersion
+
+alternative API version
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Array
+
+The PureArray object representing a connection to a Pure Storage FlashArray. Created using the `Connect-Pfa2Array` cmdlet.
+
+```yaml
+Type: Rest2Api
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContextName
+
+Performs the operation on the context specified. If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided `context`.
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases: ContextNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupId
+
+A list of group IDs.
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases: GroupIds
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupName
+
+Performs the operation on the unique group name specified. Examples of groups include host groups, pods, protection groups, and volume groups. Enter multiple names. For example, `hgroup01,hgroup02`.
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases: GroupNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MemberId
+
+Performs the operation on the unique member IDs specified. Enter multiple member IDs. The `MemberId` or `MemberName` parameter is required, but they cannot be set together.
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases: MemberIds
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MemberName
+
+Performs the operation on the unique member name specified. Examples of members include volumes, hosts, host groups, and directories. Enter multiple names. For example, `vol01,vol02`.
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases: MemberNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XRequestID
+
+(REST API 2.3+) Supplied by client during request or generated by server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### Object
+
+## NOTES
+
+The `Array` parameter is optional once `Connect-Pfa2Array` has run in the current session, because the connection is cached. For global SDK options run `Help about_Pfa2Configuration`, and for the `Filter` syntax run `Help about_Pfa2Filtering`.
+
+## RELATED LINKS
+
+[Pure Storage PowerShell SDK 2 on GitHub](https://github.com/PureStorage-Connect/PowerShellSDK2)
+
+[Pure Storage Windows PowerShell guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)
+
+[Get-Pfa2ProtectionGroupTarget](Get-Pfa2ProtectionGroupTarget.md)
+
+[New-Pfa2ProtectionGroupTarget](New-Pfa2ProtectionGroupTarget.md)
+
+[Remove-Pfa2ProtectionGroupTarget](Remove-Pfa2ProtectionGroupTarget.md)

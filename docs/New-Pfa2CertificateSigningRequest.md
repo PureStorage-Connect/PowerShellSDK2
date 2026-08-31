@@ -1,0 +1,272 @@
+---
+external help file: PureStoragePowerShellSDK2.dll-Help.xml
+Module Name: PureStoragePowerShellSDK2
+online version:
+schema: 2.0.0
+---
+
+# New-Pfa2CertificateSigningRequest
+
+## SYNOPSIS
+
+(REST API 2.4+) Create certificate-signing-requests
+
+## SYNTAX
+
+```
+New-Pfa2CertificateSigningRequest [-Array <Rest2Api>] [-XRequestID <String>] [-CommonName <String>]
+ [-Country <String>] [-Email <String>] [-Locality <String>] [-Organization <String>]
+ [-OrganizationalUnit <String>] [-State <String>]
+ [-SubjectAlternativeNames <List[String]>] [-CertificateName <String>]
+ [-ApiVersion <String>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Creates a certificate signing request using a specified certificate and parameters.
+
+## EXAMPLES
+
+### Example 1
+```powershell
+New-Pfa2CertificateSigningRequest -Array $FlashArray -CertificateName 'management' -CommonName 'flasharray-01.example.com' -Organization 'Example Corp' -Country 'US'
+```
+
+Generates a certificate signing request for the management certificate, ready to send to a certificate authority.
+
+### Example 2
+```powershell
+New-Pfa2CertificateSigningRequest -Array $FlashArray -CertificateName 'management' -CommonName 'flasharray-01.example.com' -SubjectAlternativeNames 'flasharray-01', '10.0.1.10' -Organization 'Example Corp' -OrganizationalUnit 'IT Infrastructure' -Locality 'Mountain View' -State 'California' -Country 'US' -Email 'storage-ops@example.com'
+```
+
+Generates a fully populated CSR including subject alternative names.
+
+### Example 3
+```powershell
+New-Pfa2CertificateSigningRequest -Array $FlashArray -CommonName 'flasharray-01.example.com' -Country 'US' -Email 'storage-ops@example.com'
+```
+
+Creates a certificate signing request on the array.
+
+### Example 4
+```powershell
+New-Pfa2CertificateSigningRequest -Array $FlashArray -CommonName 'flasharray-01.example.com'
+```
+
+Creates a certificate signing request specifying only -CommonName.
+
+## PARAMETERS
+
+### -ApiVersion
+
+alternative API version
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Array
+
+The PureArray object representing a connection to a Pure Storage FlashArray. Created using the `Connect-Pfa2Array` cmdlet.
+
+```yaml
+Type: Rest2Api
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificateName
+
+The resource name, such as volume name, pod name, snapshot name, and so on.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: CertificateNames
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CommonName
+
+The common name field listed in the certificate.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Country
+
+Two-letter country (ISO) code listed in the certificate.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Email
+
+The email field listed in the certificate.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Locality
+
+The locality field listed in the certificate.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+
+The organization field listed in the certificate.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OrganizationalUnit
+
+The organizational unit field listed in the certificate.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -State
+
+The state/province field listed in the certificate.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubjectAlternativeNames
+
+The alternative names that are secured by this certificate. Alternative names include IP addresses, DNS names, or URIs.
+
+```yaml
+Type: List[String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XRequestID
+
+(REST API 2.3+) Supplied by client during request or generated by server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### Object
+
+## NOTES
+
+The `Array` parameter is optional once `Connect-Pfa2Array` has run in the current session, because the connection is cached. For global SDK options run `Help about_Pfa2Configuration`, and for the `Filter` syntax run `Help about_Pfa2Filtering`.
+
+## RELATED LINKS
+
+[Pure Storage PowerShell SDK 2 on GitHub](https://github.com/PureStorage-Connect/PowerShellSDK2)
+
+[Pure Storage Windows PowerShell guide](https://support.purestorage.com/Solutions/Microsoft_Platform_Guide/a_Windows_PowerShell)
