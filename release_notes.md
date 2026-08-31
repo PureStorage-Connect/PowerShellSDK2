@@ -1,6 +1,6 @@
-# Pure Storage PowerShell SDK for FlashArray 2.52.307 Release Notes
+# Pure Storage PowerShell SDK for FlashArray 2.52.323 Release Notes
 
-GA Release: 24-08-2026
+GA Release: 24/08/2026
 
 The Pure Storage PowerShell SDK for FlashArray provides integration with the Purity Operating Environment and the FlashArray.
 It provides the functionalities of Purity's REST API as PowerShell cmdlets.
